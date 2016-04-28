@@ -7,52 +7,87 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js"></script>
     <img src="images/oxy.png" style="width:150px; height:150px;"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <style>
 body {
   background-color:black;
     color: white;
+    text-align:center;
+
 }
+
+    nav li {
+    display:inline-block;
+}
+    nav a {
+        text-decoration:none;
+        color:white;
+    }
 button.button-color {
-  background-color: #f15b22;
+  background-color: #FF8C00;
   border:none;
   color: white;
-  font-size: 14px;
-  height: 50px;
-  width: 100px;
+  font-size: 20px;
+  height: 100px;
+  width: 150px;
+  margin:10px;
+
     }
     </style>
 
 </head>
 <body>
-Select by Year and Semester:
-<button class = "button-color"><a href="/2010/fall">Fall 2010</a></button>
-<button class = "button-color"><a href="/2010/spring">Spring 2010</a></button>
-<button class = "button-color"><a href="/2010/summer">Summer 2010</a></button>
-<button class = "button-color"><a href="/2011/fall">Fall 2011</a></button>
-<button class = "button-color"><a href="/2011/spring">Spring 2011</a></button>
-<button class = "button-color"><a href="/2011/summer">Summer 2011</a></button>
-<button class = "button-color"><a href="/2012/fall">Fall 2012</a></button>
-<button class = "button-color"><a href="/2012/spring">Spring 2012</a></button>
-<button class = "button-color"><a href="/2012/summer">Summer 2012</a></button>
-<button class = "button-color"><a href="/2013/fall">Fall 2013</a></button>
-<button class = "button-color"><a href="/2013/spring">Spring 2013</a></button>
-<button class = "button-color"><a href="/2013/summer">Summer 2013</a></button>
-<button class = "button-color"><a href="/2014/fall">Fall 2014</a></button>
-<button class = "button-color"><a href="/2014/spring">Spring 2014</a></button>
-<button class = "button-color"><a href="/2014/summer">Summer 2014</a></button>
-<button class = "button-color"><a href="/2015/fall">Fall 2015</a></button>
-<button class = "button-color"><a href="/2015/spring">Spring 2015</a></button>
-<button class = "button-color"><a href="/2015/summer">Summer 2015</a></button>
-<button class = "button-color"><a href="/2016/fall">Fall 2016</a></button>
-<button class = "button-color"><a href="/2016/spring">Spring 2016</a></button>
-<button class = "button-color"><a href="/2016/summer">Summer 2016</a></button>
-<button class = "button-color"><a href="/2017/fall">Fall 2017</a></button>
-<button class = "button-color"><a href="/2017/spring">Spring 2017</a></button>
-<button class = "button-color"><a href="/2017/summer">Summer 2017</a></button>
-<p>
+<nav>
+    <div class="container">
+        <h2>Select By Semester and Year</h2>
+    <div class="row">
+        <ul>
+        <div class="col-md-12">
+<li><a href="/2010/fall"><button type="button" class = "button-color">Fall 2010</button></a></li>
+<li><a href="/2010/spring"><button type="button" class = "button-color">Spring 2010</button></a></li>
+<li><a href="/2010/summer"><button type="button" class = "button-color">Summer 2010</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2011/fall"><button type="button" class = "button-color">Fall 2011</button></a></li>
+<li><a href="/2011/spring"><button type="button" class = "button-color">Spring 2011</button></a></li>
+<li><a href="/2011/summer"><button type="button" class = "button-color">Summer 2011</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2012/fall"><button type="button" class = "button-color">Fall 2012</button></a></li>
+<li><a href="/2012/spring"><button type="button" class = "button-color">Spring 2012</button></a></li>
+<li><a href="/2012/summer"><button type="button" class = "button-color">Summer 2012</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2013/fall"><button type="button" class = "button-color">Fall 2013</button></a></li>
+<li><a href="/2013/spring"><button type="button" class = "button-color">Spring 2013</button></a></li>
+<li><a href="/2013/summer"><button type="button" class = "button-color">Summer 2013</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2014/fall"><button type="button" class = "button-color">Fall 2014</button></a></li>
+<li><a href="/2014/spring"><button type="button" class = "button-color">Spring 2014</button></a></li>
+<li><a href="/2014/summer"><button type="button" class = "button-color">Summer 2014</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2015/fall"><button type="button" class = "button-color">Fall 2015</button></a></li>
+<li><a href="/2015/spring"><button type="button" class = "button-color">Spring 2015</button></a></li>
+<li><a href="/2015/summer"><button type="button" class = "button-color">Summer 2015</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2016/fall"><button type="button" class = "button-color">Fall 2016</button></a></li>
+<li><a href="/2016/spring"><button type="button" class = "button-color">Spring 2016</button></a></li>
+<li><a href="/2016/summer"><button type="button" class = "button-color">Summer 2016</button></a></li>
+        </div>
+        <div class="col-md-12">
+<li><a href="/2017/fall"><button type="button" class = "button-color">Fall 2017</button></a></li>
+<li><a href="/2017/spring"><button type="button" class = "button-color">Spring 2017</button></a></li>
+<li><a href="/2017/summer"><button type="button" class = "button-color">Summer 2017</button></a></li>
+        </div>
+        </ul>
+    </div>
+    </div>
+</nav>
 
-</p>
 Select by Department:
 <button class = "button-color"><a href="department/AMST" >American Studies</a></button>
 <button class = "button-color"><a href="department/ARAB" >Arabic</a></button>
@@ -104,7 +139,7 @@ Select by Department:
 <button class = "button-color"><a href="department/WRD" >Writing and Retoric</a></button>
 
 Select by Core:
-    <button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
+<button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
 <button class = "button-color"><a href="core/CPAS" >Core Central/South/East Asia</a></button>
 <button class = "button-color"><a href="core/CPEU" >Core Europe</a></button>
 <button class = "button-color"><a href="core/CPFA" >Core Fine Arts (CPFA)</a></button>
@@ -121,6 +156,14 @@ Select by Core:
 <button class = "button-color"><a href="core/CPUD" >Core United States Diversity (CPUD)</a></button>
 
 </body>
+<script>
+    var buttons = document.getElementsByClassName("button-color");
+for(var i=0;i<buttons.length;i++) {
+  buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
+  //or
+  buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
+}
+</script>
 
-
-</body></html>
+</body>
+</html>
