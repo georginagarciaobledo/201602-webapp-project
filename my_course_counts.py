@@ -170,15 +170,16 @@ def semester_select(semester):
             results.append(course)
     return render_template('semester.html', results = results)
 
-@app.route('/<department>/')
+
+@app.route('/department/<department>/')
 def department_select(department):
     results = []
     for course in get_data():
         if course.department == department:
             results.append(course)
-    return render_template('department.html', results = results)
+    return render_template('departments.html', results = results)
 
-@app.route('/<core>/')
+@app.route('/core/<core>/')
 def core_select(core):
     results = []
     for course in get_data():
@@ -196,7 +197,7 @@ def year_semester_select(year, semester):
     return render_template('year_semester.html', results=results)
 
 
-@app.route('/<year>/<semester>/<department>/')
+@app.route('/<year>/<semester>/department/<department>/')
 def year_semester_department_select(year, semester, department):
     results = []
     for course in get_data():
@@ -205,7 +206,7 @@ def year_semester_department_select(year, semester, department):
     return render_template('year_semester_department.html', results=results)
 
 
-@app.route('/<year>/<semester>/<core>/')
+@app.route('/<year>/<semester>/core/<core>/')
 def year_semester_core_select(year, semester, core):
     results = []
     for course in get_data():
@@ -213,21 +214,13 @@ def year_semester_core_select(year, semester, core):
             results.append(course)
     return render_template('year_semester_core.html', results=results)
 
-@app.route('/<year>/<semester>/<department>/<core>/')
+@app.route('/<year>/<semester>/department/<department>/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
         if ((course.year == year and course.semester == semester) and course.department == department) and course.core == core:
             results.append(course)
     return render_template('year_semester_department_core.html', results=results)
-
-@app.route('/<year>/<semester>/<department>/<instructor>/')
-def year_semester_department_instructor_select(year, semester, department, instructor):
-    results = []
-    for course in get_data():
-        if course.year == year and course.semester == semester and course.department == department and course.instructor == instructor:
-            results.append(course)
-    return render_template('year_semester_department_instructor.html', results=results)
 
 
 # The functions below lets you access files in the css, js, and images folders.
