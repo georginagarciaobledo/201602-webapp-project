@@ -200,7 +200,7 @@ def year_semester_select(year, semester):
 def year_semester_department_select(year, semester, department):
     results = []
     for course in get_data():
-        if course.year == year and course.semester == semester and course.department == department:
+        if (course.year == year and course.semester == semester) and course.department == department:
             results.append(course)
     return render_template('year_semester_department.html', results=results)
 
@@ -209,7 +209,7 @@ def year_semester_department_select(year, semester, department):
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
-        if course.year == year and course.semester == semester and course.department == department and course.core == core:
+        if ((course.year == year and course.semester == semester) and course.department == department) and course.core == core:
             results.append(course)
     return render_template('year_semester_department_core.html', results=results)
 
