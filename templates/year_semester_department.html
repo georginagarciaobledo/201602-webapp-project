@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ year }}{{season}}{{department}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<style>
+
+table, th, td {border: 1px dotted black;
+    border-collapse: collapse;}
+    th, td {padding: 5px;}
+
+</style>
+<body>
+<table style="width:100%">
+    <tr>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Department</th>
+        <th>Course Number</th>
+        <th>Title</th>
+        <th>Section</th>
+        <th>Units</th>
+        <th>Professor</th>
+        <th>Meeting Times</th>
+        <th>Cores Met</th>
+        </tr>
+    {%for class in results %}
+    <tr>
+        <td>{{class.year}}</td>
+        <td>{{class.semester}}</td>
+        <td>{{class.department}}</td>
+        <td>{{class.course_number}}</td>
+        <td>{{class.class_title}}</td>
+        <td>{{class.section}}</td>
+        <td>{{class.unit}}</td>
+        <td>{{class.instructor}}</td>
+        <td>{{class.time}}</td>
+        <td>{{class.core}}</td>
+        {% endfor %}</tr></table>
+</body>
+</html>
