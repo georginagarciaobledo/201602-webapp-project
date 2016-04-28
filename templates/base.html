@@ -6,121 +6,179 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <img src="images/oxy.png" style="width:150px; height:150px;"/>
 
 <style>
 body {
   background-color:black;
     color: white;
+    text-align:center;
+
 }
+    nav li {
+    display:inline-block;
+}
+     nav a {
+        text-decoration:none;
+        color:white;
+    }
 button.button-color {
-  background-color: #f15b22;
+  background-color: #FF8C00;
   border:none;
   color: white;
-  font-size: 14px;
-  height: 50px;
-  width: 100px;
+  font-size: 20px;
+  height: 150px;
+  width: 180px;
+  margin:10px;
+
+
     }
     </style>
 
 </head>
 <body>
-Select by Year and Semester:
-<button class = "button-color"><a href="/2010/fall">Fall 2010</a></button>
-<button class = "button-color"><a href="/2010/spring">Spring 2010</a></button>
-<button class = "button-color"><a href="/2010/summer">Summer 2010</a></button>
-<button class = "button-color"><a href="/2011/fall">Fall 2011</a></button>
-<button class = "button-color"><a href="/2011/spring">Spring 2011</a></button>
-<button class = "button-color"><a href="/2011/summer">Summer 2011</a></button>
-<button class = "button-color"><a href="/2012/fall">Fall 2012</a></button>
-<button class = "button-color"><a href="/2012/spring">Spring 2012</a></button>
-<button class = "button-color"><a href="/2012/summer">Summer 2012</a></button>
-<button class = "button-color"><a href="/2013/fall">Fall 2013</a></button>
-<button class = "button-color"><a href="/2013/spring">Spring 2013</a></button>
-<button class = "button-color"><a href="/2013/summer">Summer 2013</a></button>
-<button class = "button-color"><a href="/2014/fall">Fall 2014</a></button>
-<button class = "button-color"><a href="/2014/spring">Spring 2014</a></button>
-<button class = "button-color"><a href="/2014/summer">Summer 2014</a></button>
-<button class = "button-color"><a href="/2015/fall">Fall 2015</a></button>
-<button class = "button-color"><a href="/2015/spring">Spring 2015</a></button>
-<button class = "button-color"><a href="/2015/summer">Summer 2015</a></button>
-<button class = "button-color"><a href="/2016/fall">Fall 2016</a></button>
-<button class = "button-color"><a href="/2016/spring">Spring 2016</a></button>
-<button class = "button-color"><a href="/2016/summer">Summer 2016</a></button>
-<button class = "button-color"><a href="/2017/fall">Fall 2017</a></button>
-<button class = "button-color"><a href="/2017/spring">Spring 2017</a></button>
-<button class = "button-color"><a href="/2017/summer">Summer 2017</a></button>
-<p>
+<section id="year-semester">
+    <div class="row">
+<h1>Select by Year and Semester:</h1>
+    <div class="col-md-12">
+<nav>
+<ul>
+<li><a href="/2010/fall"><button class="button-color">Fall 2010</button></a></li>
+<li><a href="/2010/spring"><button class="button-color">Spring 2010</button></a></li>
+<li><a href="/2010/summer"><button class="button-color">Summer 2010</button></a></li>
+<li><a href="/2011/fall"><button class="button-color">Fall 2011</button></a></li>
+<li><a href="/2011/spring"><button class="button-color">Spring 2011</button></a></li>
+<li><a href="/2011/summer"><button class="button-color">Summer 2011</button></a></li>
+<li><a href="/2012/fall"><button class="button-color">Fall 2012</button></a></li>
+<li><a href="/2012/spring"><button class="button-color">Spring 2012</button></a></li>
+<li><a href="/2012/summer"><button class="button-color">Summer 2012</button></a></li>
+<li><a href="/2013/fall"><button class="button-color">Fall 2013</button></a></li>
+<li><a href="/2013/spring"><button class="button-color">Spring 2013</button></a></li>
+<li><a href="/2013/summer"><button class="button-color">Summer 2013</button></a></li>
+<li><a href="/2014/fall"><button class="button-color">Fall 2014</button></a></li>
+<li><a href="/2014/spring"><button class="button-color">Spring 2014</button></a></li>
+<li><a href="/2014/summer"><button class="button-color">Summer 2014</button></a></li>
+<li><a href="/2015/fall"><button class="button-color">Fall 2015</button></a></li>
+<li><a href="/2015/spring"><button class="button-color">Spring 2015</button></a></li>
+<li><a href="/2015/summer"><button class="button-color">Summer 2015</button></a></li>
+<li><a href="/2016/fall"><button class="button-color">Fall 2016</button></a></li>
+<li><a href="/2016/spring"><button class="button-color">Spring 2016</button></a></li>
+<li><a href="/2016/summer"><button class="button-color">Summer 2016</button></a></li>
+<li><a href="/2017/fall"><button class="button-color">Fall 2017</button></a></li>
+<li><a href="/2017/spring"><button class="button-color">Spring 2017</button></a></li>
+<li><a href="/2017/summer"><button class="button-color">Summer 2017</button></a></li>
+</ul>
+</nav>
+        </div>
+        </div>
+</section>
+<section id="department">
+    <div class="row">
+<h1>Select by Department:</h1>
+        <div class="col-md-12">
+<nav>
+<ul>
+<li><a href="department/AMST"><button class="button-color">American Studies</button></a></li>
+<li><a href="department/ARAB"><button class="button-color">Arabic</button></a></li>
+<li><a href="department/ARTH"><button class="button-color">Art History and Visual Arts/Art History</button></a></li>
+<li><a href="department/ARTM"><button class="button-color">Art History and Visual Arts/Media Arts and Culture</button></a></li>
+<li><a href="department/ARTS"><button class="button-color">Art History and Visual Arts/Studio Art</button></a></li>
+<li><a href="department/BICH"><button class="button-color">Biochemistry</button></a></li>
+<li><a href="department/BIO"><button class="button-color">Biology</button></a></li>
+<li><a href="department/CHEM"><button class="button-color">Chemistry</button></a></li>
+<li><a href="department/CHIN"><button class="button-color">Chinese</button></a></li>
+<li><a href="department/CLAS"><button class="button-color">Classical Studies</button></a></li>
+<li><a href="department/COGS"><button class="button-color">Cognitive Science</button></a></li>
+<li><a href="department/COMP"><button class="button-color">Computer Science</button></a></li>
+<li><a href="department/CSLC"><button class="button-color">Comparative Studies in Literature and Culture</button></a></li>
+<li><a href="department/CSP"><button class="button-color">Cultural Studies Program</button></a></li>
+<li><a href="department/CTSJ"><button class="button-color">Critical Theory and Social Justice</button></a></li>
+<li><a href="department/DWA"><button class="button-color">Diplomacy and World Affairs</button></a></li>
+<li><a href="department/ECLS"><button class="button-color">English and Comparative Literary Studies</button></a></li>
+<li><a href="department/ECON"><button class="button-color">Economics</button></a></li>
+<li><a href="department/EDUC"><button class="button-color">Education</button></a></li>
+<li><a href="department/ENGL"><button class="button-color">English</button></a></li>
+<li><a href="department/ENWR"><button class="button-color">English Writing</button></a></li>
+<li><a href="department/FREN"><button class="button-color">French</button></a></li>
+<li><a href="department/GEO"><button class="button-color">Geology</button></a></li>
+<li><a href="department/GERM"><button class="button-color">German</button></a></li>
+<li><a href="department/GRK"><button class="button-color">Greek</button></a></li>
+<li><a href="department/HIST"><button class="button-color">History</button></a></li>
+<li><a href="department/ITAL"><button class="button-color">Italian</button></a></li>
+<li><a href="department/JAPN"><button class="button-color">Japanese</button></a></li>
+<li><a href="department/KINE"><button class="button-color">Kinesiology</button></a></li>
+<li><a href="department/LANG"><button class="button-color">Language</button></a></li>
+<li><a href="department/LATN"><button class="button-color">Latin</button></a></li>
+<li><a href="department/LING"><button class="button-color">Linguistics</button></a></li>
+<li><a href="department/LLAS"><button class="button-color">Latino/a and Latin American</button></a></li>
+<li><a href="department/MUSA"><button class="button-color">Music Applied Study</button></a></li>
+<li><a href="department/MUSC"><button class="button-color">Music</button></a></li>
+<li><a href="department/PHAC"><button class="button-color">Physical Activities</button></a></li>
+<li><a href="department/PHIL"><button class="button-color">Philosophy</button></a></li>
+<li><a href="department/PHYS"><button class="button-color">Physics</button></a></li>
+<li><a href="department/POLS"><button class="button-color">Politics</button></a></li>
+<li><a href="department/PSYC"><button class="button-color">Psychology</button></a></li>
+<li><a href="department/RELS"><button class="button-color">Religious Studies</button></a></li>
+<li><a href="department/RUSN"><button class="button-color">Russian</button></a></li>
+<li><a href="department/SOC"><button class="button-color">Sociology</button></a></li>
+<li><a href="department/SPAN"><button class="button-color">Spanish and French Studies</button></a></li>
+<li><a href="department/THEA"><button class="button-color">Theater</button></a></li>
+<li><a href="department/UEP"><button class="button-color">Urban and Environmental Policy</button></a></li>
+<li><a href="department/WRD"><button class="button-color">Writing and Rhetoric</button></a></li>
+</ul>
+</nav>
+        </div>
+        </div>
+</section>
+<section id="core">
+    <div class="row">
+<h1>Select by Core:</h1>
+        <div class="col-md-12">
+<nav>
+<ul>
+    <li><a href="core/CPAF"><button class="button-color">Core Africa and the Middle East</button></a></li>
+<li><a href="core/CPAS"><button class="button-color">Core Central/South/East Asia</button></a></li>
+<li><a href="core/CPEU"><button class="button-color">Core Europe</button></a></li>
+<li><a href="core/CPFA"><button class="button-color">Core Fine Arts (CPFA)</button></a></li>
+<li><a href="core/CFAP"><button class="button-color">Core Fine Arts Partial (CFAP)</button></a></li>
+<li><a href="core/CPGC"><button class="button-color">Core Global Connections (CPGC)</button></a></li>
+<li><a href="core/CPIC"><button class="button-color">Core Intercultural (CPIC)</button></a></li>
+<li><a href="core/CPLS"><button class="button-color">Core Laboratory Science (CPLS)</button></a></li>
+<li><a href="core/CPLA"><button class="button-color">Core Latin America (CPLA)</button></a></li>
+<li><a href="core/CMSP"><button class="button-color">Core Math/Science Partial (CMSP)</button></a></li>
+<li><a href="core/CPMS"><button class="button-color">Core Mathematics/Science (CPMS)</button></a></li>
+<li><a href="core/CPPE"><button class="button-color">Core Pre-1800 (CPPE)</button></a></li>
+<li><a href="core/CPRF"><button class="button-color">Core Regional Focus (CPRF)</button></a></li>
+<li><a href="core/CPUS"><button class="button-color">Core United States (CPUS)</button></a></li>
+<li><a href="core/CPUD"><button class="button-color">Core United States Diversity (CPUD)</button></a></li>
+</ul>
+</nav>
+    </div>
+    </div>
+</section>
 
-</p>
-Select by Department:
-<button class = "button-color"><a href="department/AMST" >American Studies</a></button>
-<button class = "button-color"><a href="department/ARAB" >Arabic</a></button>
-<button class = "button-color"><a href="department/ARTH" >Art History and Visual Arts/Art History</a></button>
-<button class = "button-color"><a href="department/ARTM" >Art History and Visual Arts/Media Arts and Culture</a></button>
-<button class = "button-color"><a href="department/ARTS" >Art History and Visual Arts/Studio Art</a></button>
-<button class = "button-color"><a href="department/BICH" >Biochemistry</a></button>
-<button class = "button-color"><a href="department/BIO" >Biology</a></button>
-<button class = "button-color"><a href="department/CHEM" >Chemistry</a></button>
-<button class = "button-color"><a href="department/CHIN" >Chinese</a></button>
-<button class = "button-color"><a href="department/CLAS" >Classical Studies</a></button>
-<button class = "button-color"><a href="department/COGS" >Cognitive Science</a></button>
-<button class = "button-color"><a href="department/COMP" >Computer Science</a></button>
-<button class = "button-color"><a href="department/CSLC" >Comparative Studies in Literature and Culture</a></button>
-<button class = "button-color"><a href="department/CSP" >Cultural Studies Program</a></button>
-<button class = "button-color"><a href="department/CTSJ" >Critical Theory and Social Justice</a></button>
-<button class = "button-color"><a href="department/DWA" >Diplomacy and World Affairs</a></button>
-<button class = "button-color"><a href="department/ECLS" >English and Comparative Literary Studies</a></button>
-<button class = "button-color"><a href="department/ECON" >Economics</a></button>
-<button class = "button-color"><a href="department/EDUC" >Education</a></button>
-<button class = "button-color"><a href="department/ENGL" >English</a></button>
-<button class = "button-color"><a href="department/ENWR" >English Writing</a></button>
-<button class = "button-color"><a href="department/FREN" >French</a></button>
-<button class = "button-color"><a href="department/GEO" >Geology'</a></button>
-<button class = "button-color"><a href="department/GERM" >German</a></button>
-<button class = "button-color"><a href="department/GRK" >Greek</a></button>
-<button class = "button-color"><a href="department/HIST" >History</a></button>
-<button class = "button-color"><a href="department/ITAL" >Italian</a></button>
-<button class = "button-color"><a href="department/JAPN" >Japanese</a></button>
-<button class = "button-color"><a href="department/KINE" >Kinesiology</a></button>
-<button class = "button-color"><a href="department/LANG" >Language</a></button>
-<button class = "button-color"><a href="department/LATN" >Latin</a></button>
-<button class = "button-color"><a href="department/LING" >Linguistics</a></button>
-<button class = "button-color"><a href="department/LLAS" >Latino/a and Latin American Studies</a></button>
-<button class = "button-color"><a href="department/MATH" >Mathematics</a></button>
-<button class = "button-color"><a href="department/MUSA" >Music Applied Study</a></button>
-<button class = "button-color"><a href="department/MUSC" >Music</a></button>
-<button class = "button-color"><a href="department/PHAC" >Physical Activities</a></button>
-<button class = "button-color"><a href="department/PHIL" >Philosophy</a></button>
-<button class = "button-color"><a href="department/PHYS" >Physics</a></button>
-<button class = "button-color"><a href="department/POLS" >Politics</a></button>
-<button class = "button-color"><a href="department/PSYC" >Psychology</a></button>
-<button class = "button-color"><a href="department/RELS" >Religious Studies</a></button>
-<button class = "button-color"><a href="department/RUSN" >Russian</a></button>
-<button class = "button-color"><a href="department/SOC" >Sociology</a></button>
-<button class = "button-color"><a href="department/SPAN" >Spanish and French Studies</a></button>
-<button class = "button-color"><a href="department/THEA" >Theater</a></button>
-<button class = "button-color"><a href="department/UEP" >Urban and Environmental Policy</a></button>
-<button class = "button-color"><a href="department/WRD" >Writing and Retoric</a></button>
+<script>
+    var buttons = document.getElementsByClassName("button-color");
+for(var i=0;i<buttons.length;i++) {
+  buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
+  //or
+  buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
+}
 
-Select by Core:
-    <button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
-<button class = "button-color"><a href="core/CPAS" >Core Central/South/East Asia</a></button>
-<button class = "button-color"><a href="core/CPEU" >Core Europe</a></button>
-<button class = "button-color"><a href="core/CPFA" >Core Fine Arts (CPFA)</a></button>
-<button class = "button-color"><a href="core/CFAP" >Core Fine Arts Partial (CFAP)</a></button>
-<button class = "button-color"><a href="core/CPGC" >Core Global Connections (CPGC)</a></button>
-<button class = "button-color"><a href="core/CPIC" >Core Intercultural (CPIC)</a></button>
-<button class = "button-color"><a href="core/CPLS" >Core Laboratory Science (CPLS)</a></button>
-<button class = "button-color"><a href="core/CPLA" >Core Latin America (CPLA)</a></button>
-<button class = "button-color"><a href="core/CMSP" >Core Math/Science Partial (CMSP)</a></button>
-<button class = "button-color"><a href="core/CPMS" >Core Mathematics/Science (CPMS)</a></button>
-<button class = "button-color"><a href="core/CPPE" >Core Pre-1800 (CPPE)</a></button>
-<button class = "button-color"><a href="core/CPRF" >Core Regional Focus (CPRF)</a></button>
-<button class = "button-color"><a href="core/CPUS" >Core United States (CPUS)</a></button>
-<button class = "button-color"><a href="core/CPUD" >Core United States Diversity (CPUD)</a></button>
+// for smooth scrolling
+$('a[href^="#"]').on('click', function (e) {
+	e.preventDefault();
+	var target = this.hash;
+	var $target = $(target);
 
+	$('html, body').stop().animate({
+		'scrollTop': $target.offset().top
+	}, 900, 'swing', function () {
+		window.location.hash = target;
+
+	});
+});
+</script>
 </body>
-
-
-</body></html>
+</html>
