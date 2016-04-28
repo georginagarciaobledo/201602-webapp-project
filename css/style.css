@@ -8,9 +8,18 @@ button.button-color {
   color: white;
   font-size: 12px;
   height: 40px;
-  width: 80px;
+  width: 100px;
   border-radius: 8px;
   display:inline-block;
   margin-bottom: 5px;
     }
 
+a {
+color: black;
+text-decoration: none;
+font-family: "Helvetica Neue","Helvetica","Arial",sans-serif,sans-serif;
+}
+
+table, th, td {border: 1px dotted grey;
+    border-collapse: collapse;}
+    th, td {padding: 5px;}

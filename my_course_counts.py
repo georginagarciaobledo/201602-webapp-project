@@ -214,7 +214,7 @@ def year_semester_core_select(year, semester, core):
             results.append(course)
     return render_template('year_semester_core.html', results=results)
 
-@app.route('/<year>/<semester>/department/<department>/<core>/')
+@app.route('/<year>/<semester>/department/<department>/core/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
