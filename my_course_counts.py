@@ -6,7 +6,7 @@ from flask import Flask, render_template, send_from_directory
 app = Flask(__name__)
 
 # FIXME write your app below
-'''
+
 DEPARTMENT_ABBREV = {
     'AMST': 'American Studies',
     'ARAB': 'Arabic',
@@ -123,7 +123,7 @@ SEASONS = {
     'fall': 'fall',
     'summer': 'summer'
 }
-'''
+
 
 class Course:
     def __init__(self, year, semester, department, course_number, section, class_title, unit, instructor, time, core,
@@ -197,7 +197,7 @@ def year_semester_department_select(year, semester, department):
 def view_homepage():
     return render_template('base.html')
 
-'''
+
 @app.route('/<semester>')
 def view_course_info(semester):
     return render_template('semester.html')
@@ -205,11 +205,10 @@ def view_course_info(semester):
 @app.route('/<year>')
 def view_course_info(year):
     return render_template('year.html')
-'''
 
 
 
-'''
+
 @app.route('/fall2010')
 def get_fall2010():
         fall2010options = []
@@ -217,10 +216,6 @@ def get_fall2010():
             fall2010options.append((key, value))
         fall2010options.sort(key=lambda  f: x[1])
         return render_template('fall2010.html', fall2010=fall2010options)
-
-
-
-
 
 
 @app.route('/fall2010')
@@ -234,7 +229,7 @@ def view_alldepartment():
         listoptions.append((key, value))
     listoptions.sort(key=lambda x: x[1])
     return render_template('department2.html', department=listoptions)
-'''
+
 
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
