@@ -152,7 +152,15 @@ def get_data():
             course_data.append(Course(year, semester, department, course_number, section, class_title, unit, instructor, time, core, seats, enrolled, reserved, reserved_open, waitlisted))
     return course_data
 
-@app.route('<semester>')
+@app.route('/<year>')
+def year_select(year):
+    results = []
+    for course in get_data():
+        if course.year == year:
+            results.append(course)
+    return render_template('year.html', results = results)
+
+@app.route('/<semester>')
 def semester_select(semester):
     results = []
     for course in get_data():
@@ -160,15 +168,29 @@ def semester_select(semester):
             results.append(course)
     return render_template('semester.html', results = results)
 
+@app.route('/<department>')
+def department_select(department):
+    results = []
+    for course in get_data():
+        if course.department == department:
+            results.append(course)
+    return render_template('department.html', results = results)
+
 @app.route('/<year>/<semester>')
 def year_semester_select(year, semester):
     results = []
     for course in get_data():
         if course.year == year and course.semester == semester:
             results.append(course)
-    return render_template('fall2010.html', results=results)
+    return render_template('year_semester.html', results=results)
 
-
+@app.route('/<year>/<semester>/<department>')
+def year_semester_department_select(year, semester, department):
+    results = []
+    for course in get_data():
+        if course.year == year and course.semester == semester and course.department == department:
+            results.append(course)
+    return render_template('year_semester_department.html', results=results)
 
 
 @app.route('/')
