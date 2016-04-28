@@ -3,123 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ year }}{{semester}}</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-    <form method = "get" action = "/<year>/<semester>/<department>">
+    <link rel="stylesheet" href="/css/style.css">
 
+</head>
+    <form method = "get" action = "/<year>/<semester>">
+        
 <div>
+Going abroad?    
+    <select>
+    <option value="ABAR" >Occidental-in-Argentina</option>
+    <option value="ABAS" >Occidental-in-Austria</option>
+    <option value="ABAU" >Occidental-in-Australia</option>
+    <option value="ABBO" >Occidental-in-Bolivia</option>
+    <option value="ABBR" >Occidental-in-Brazil</option>
+    <option value="ABBW" >Occidental-in-Botswana</option>
+    <option value="ABCH" >Occidental-in-China</option>
+    <option value="ABCI" >Occidental-in-Chile</option>
+    <option value="ABCR" >Occidental-in-Costa Rica</option>
+    <option value="ABCZ" >Occidental-in-the-Czech Republic</option>
+    <option value="ABDE" >Occidental-in-Denmark</option>
+    <option value="ABDR" >Occidental-in-the-Dominican Republic</option>
+    <option value="ABFR" >Occidental-in-France</option>
+    <option value="ABGE" >Occidental-in-Germany</option>
+    <option value="ABHU" >Occidental-in-Hungary</option>
+    <option value="ABIC" >Occidental-in-Iceland </option>
+    <option value="ABID" >Occidental-in-Indonesia (ABID)</option>
+    <option value="ABIN" >Occidental-in-India</option>
+    <option value="ABIR" >Occidental-in-Ireland (ABIR)</option>
+    <option value="ABIT" >Occidental-in-Italy (ABIT)</option>
+    <option value="ABJA" >Occidental-in-Japan (ABJA)</option>
+    <option value="ABJO" >Occidental-in-Jordan (ABJO)</option>
+    <option value="ABMO" >Occidental-in-Morocco (ABMO)</option>
+    <option value="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</option>
+    <option value="ABNI" >Occidental-in-Nicaragua (ABNI)</option>
+    <option value="ABNT" >Occidental-in-the-Netherlands (ABNT)</option>
+    <option value="ABNZ" >Occidental-in-New Zealand (ABNZ)</option>
+    <option value="ABPE" >Occidental-in-Peru (ABPE)</option>
+    <option value="ABRU" >Occidental-in-Russia (ABRU)</option>
+    <option value="ABSA" >Occidental-in-South Africa</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSM" >Occidental-in-Samoa</option>
+    <option value="ABSN" >Occidental-in-Sweden</option>
+    <option value="ABSP" >Occidental-in-Spain</option>
+    <option value="ABSW" >Occidental-in-Switzerland</option>
+    <option value="ABTN" >Occidental-in-Taiwan</option>
+    <option value="ABUA" >Occidental-in-the-United Arab Emirates</option>
+    <option value="ABUK" >Occidental-in-the-United Kingdom</option>
+        </select>
+
     Filter by Department:
-    <p><a href="ABAR" >Occidental-in-Argentina</a></p>
-    <p><a href="ABAS" >Occidental-in-Austria</a></p>
-    <p><a href="ABAU" >Occidental-in-Australia</a></p>
-    <p><a href="ABBO" >Occidental-in-Bolivia</a></p>
-    <p><a href="ABBR" >Occidental-in-Brazil</a></p>
-    <p><a href="ABBW" >Occidental-in-Botswana</a></p>
-    <p><a href="ABCH" >Occidental-in-China</a></p>
-    <p><a href="ABCI" >Occidental-in-Chile</a></p>
-    <p><a href="ABCR" >Occidental-in-Costa Rica</a></p>
-    <p><a href="ABCZ" >Occidental-in-the-Czech Republic</a></p>
-    <p><a href="ABDE" >Occidental-in-Denmark</a></p>
-    <p><a href="ABDR" >Occidental-in-the-Dominican Republic</a></p>
-    <p><a href="ABFR" >Occidental-in-France</a></p>
-    <p><a href="ABGE" >Occidental-in-Germany</a></p>
-    <p><a href="ABHU" >Occidental-in-Hungary</a></p>
-    <p><a href="ABIC" >Occidental-in-Iceland </a></p>
-    <p><a href="ABID" >Occidental-in-Indonesia (ABID)</a></p>
-    <p><a href="ABIN" >Occidental-in-India</a></p>
-    <p><a href="ABIR" >Occidental-in-Ireland (ABIR)</a></p>
-    <p><a href="ABIT" >Occidental-in-Italy (ABIT)</a></p>
-    <p><a href="ABJA" >Occidental-in-Japan (ABJA)</a></p>
-    <p><a href="ABJO" >Occidental-in-Jordan (ABJO)</a></p>
-    <p><a href="ABMO" >Occidental-in-Morocco (ABMO)</a></p>
-    <p><a href="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</a></p>
-    <p><a href="ABNI" >Occidental-in-Nicaragua (ABNI)</a></p>
-    <p><a href="ABNT" >Occidental-in-the-Netherlands (ABNT)</a></p>
-    <p><a href="ABNZ" >Occidental-in-New Zealand (ABNZ)</a></p>
-    <p><a href="ABPE" >Occidental-in-Peru (ABPE)</a></p>
-    <p><a href="ABRU" >Occidental-in-Russia (ABRU)</a></p>
-    <p><a href="ABSA" >Occidental-in-South Africa</a></p>
-    <p><a href="ABSE" >Occidental-in-Senegal</a></p>
-    <p><a href="ABSE" >Occidental-in-Senegal</a></p>
-    <p><a href="ABSM" >Occidental-in-Samoa</a></p>
-    <p><a href="ABSN" >Occidental-in-Sweden</a></p>
-    <p><a href="ABSP" >Occidental-in-Spain</a></p>
-    <p><a href="ABSW" >Occidental-in-Switzerland</a></p>
-    <p><a href="ABTN" >Occidental-in-Taiwan</a></p>
-    <p><a href="ABUA" >Occidental-in-the-United Arab Emirates</a></p>
-    <p><a href="ABUK" >Occidental-in-the-United Kingdom</a></p>
-    <p><a href="AMST" >American Studies</a></p>
-    <p><a href="ARAB" >Arabic</a></p>
-    <p><a href="ARTH" >Art History and Visual Arts/Art History</a></p>
-    <p><a href="ARTM" >Art History and Visual Arts/Media Arts and Culture</a></p>
-    <p><a href="ARTS" >Art History and Visual Arts/Studio Art</a></p>
-    <p><a href="BICH" >Biochemistry</a></p>
-    <p><a href="/2010/fall/BIO" >Biology</a></p>
-    <p><a href="CHEM" >Chemistry</a></p>
-    <p><a href="CHIN" >Chinese</a></p>
-    <p><a href="CLAS" >Classical Studies</a></p>
-    <p><a href="COGS" >Cognitive Science</a></p>
-    <p><a href="COMP" >Computer Science</a></p>
-    <p><a href="CSLC" >Comparative Studies in Literature and Culture</a></p>
-    <p><a href="CSP" >Cultural Studies Program</a></p>
-    <p><a href="CTSJ" >Critical Theory and Social Justice</a></p>
-    <p><a href="DWA" >Diplomacy and World Affairs</a></p>
-    <p><a href="ECLS" >English and Comparative Literary Studies</a></p>
-    <p><a href="ECON" >Economics</a></p>
-    <p><a href="EDUC" >Education</a></p>
-    <p><a href="ENGL" >English</a></p>
-    <p><a href="ENWR" >English Writing</a></p>
-    <p><a href="FREN" >French</a></p>
-    <p><a href="GEO" >Geology'</a></p>
-    <p><a href="GERM" >German</a></p>
-    <p><a href="GRK" >Greek</a></p>
-    <p><a href="HIST" >History</a></p>
-    <p><a href="ITAL" >Italian</a></p>
-    <p><a href="JAPN" >Japanese</a></p>
-    <p><a href="KINE" >Kinesiology</a></p>
-    <p><a href="LANG" >Language</a></p>
-    <p><a href="LATN" >Latin</a></p>
-    <p><a href="LING" >Linguistics</a></p>
-    <p><a href="LLAS" >Latino/a and Latin American Studies</a></p>
-    <p><a href="MATH" >Mathematics</a></p>
-    <p><a href="MUSA" >Music Applied Study</a></p>
-    <p><a href="MUSC" >Music</a></p>
-    <p><a href="PHAC" >Physical Activities</a></p>
-    <p><a href="PHIL" >Philosophy</a></p>
-    <p><a href="PHYS" >Physics</a></p>
-    <p><a href="POLS" >Politics</a></p>
-    <p><a href="PSYC" >Psychology</a></p>
-    <p><a href="RELS" >Religious Studies</a></p>
-    <p><a href="RUSN" >Russian</a></p>
-    <p><a href="SOC" >Sociology</a></p>
-    <p><a href="SPAN" >Spanish and French Studies</a></p>
-    <p><a href="THEA" >Theater</a></p>
-    <p><a href="UEP" >Urban and Environmental Policy</a></p>
-    <p><a href="WRD" >Writing and Retoric</a></p>
+<button class = "button-color"><a href="department/AMST" >American Studies</a></button>
+<button class = "button-color"><a href="department/ARAB" >Arabic</a></button>
+<button class = "button-color"><a href="department/ARTH" >Art History and Visual Arts/Art History</a></button>
+<button class = "button-color"><a href="department/ARTM" >Art History and Visual Arts/Media Arts and Culture</a></button>
+<button class = "button-color"><a href="department/ARTS" >Art History and Visual Arts/Studio Art</a></button>
+<button class = "button-color"><a href="department/BICH" >Biochemistry</a></button>
+<button class = "button-color"><a href="department/BIO" >Biology</a></button>
+<button class = "button-color"><a href="department/CHEM" >Chemistry</a></button>
+<button class = "button-color"><a href="department/CHIN" >Chinese</a></button>
+<button class = "button-color"><a href="department/CLAS" >Classical Studies</a></button>
+<button class = "button-color"><a href="department/COGS" >Cognitive Science</a></button>
+<button class = "button-color"><a href="department/COMP" >Computer Science</a></button>
+<button class = "button-color"><a href="department/CSLC" >Comparative Studies in Literature and Culture</a></button>
+<button class = "button-color"><a href="department/CSP" >Cultural Studies Program</a></button>
+<button class = "button-color"><a href="department/CTSJ" >Critical Theory and Social Justice</a></button>
+<button class = "button-color"><a href="department/DWA" >Diplomacy and World Affairs</a></button>
+<button class = "button-color"><a href="department/ECLS" >English and Comparative Literary Studies</a></button>
+<button class = "button-color"><a href="department/ECON" >Economics</a></button>
+<button class = "button-color"><a href="department/EDUC" >Education</a></button>
+<button class = "button-color"><a href="department/ENGL" >English</a></button>
+<button class = "button-color"><a href="department/ENWR" >English Writing</a></button>
+<button class = "button-color"><a href="department/FREN" >French</a></button>
+<button class = "button-color"><a href="department/GEO" >Geology'</a></button>
+<button class = "button-color"><a href="department/GERM" >German</a></button>
+<button class = "button-color"><a href="department/GRK" >Greek</a></button>
+<button class = "button-color"><a href="department/HIST" >History</a></button>
+<button class = "button-color"><a href="department/ITAL" >Italian</a></button>
+<button class = "button-color"><a href="department/JAPN" >Japanese</a></button>
+<button class = "button-color"><a href="department/KINE" >Kinesiology</a></button>
+<button class = "button-color"><a href="department/LANG" >Language</a></button>
+<button class = "button-color"><a href="department/LATN" >Latin</a></button>
+<button class = "button-color"><a href="department/LING" >Linguistics</a></button>
+<button class = "button-color"><a href="department/LLAS" >Latino/a and Latin American Studies</a></button>
+<button class = "button-color"><a href="department/MATH" >Mathematics</a></button>
+<button class = "button-color"><a href="department/MUSA" >Music Applied Study</a></button>
+<button class = "button-color"><a href="department/MUSC" >Music</a></button>
+<button class = "button-color"><a href="department/PHAC" >Physical Activities</a></button>
+<button class = "button-color"><a href="department/PHIL" >Philosophy</a></button>
+<button class = "button-color"><a href="department/PHYS" >Physics</a></button>
+<button class = "button-color"><a href="department/POLS" >Politics</a></button>
+<button class = "button-color"><a href="department/PSYC" >Psychology</a></button>
+<button class = "button-color"><a href="department/RELS" >Religious Studies</a></button>
+<button class = "button-color"><a href="department/RUSN" >Russian</a></button>
+<button class = "button-color"><a href="department/SOC" >Sociology</a></button>
+<button class = "button-color"><a href="department/SPAN" >Spanish and French Studies</a></button>
+<button class = "button-color"><a href="department/THEA" >Theater</a></button>
+<button class = "button-color"><a href="department/UEP" >Urban and Environmental Policy</a></button>
+<button class = "button-color"><a href="department/WRD" >Writing and Retoric</a></button>
 
     Filter by Core:
-    <p><a href="CPAF" >Core Africa and the Middle East</a></p>
-    <p><a href="CPAS" >Core Central/South/East Asia</a></p>
-    <p><a href="CPEU" >Core Europe</a></p>
-    <p><a href="CPFA" >Core Fine Arts (CPFA)</a></p>
-    <p><a href="CFAP" >Core Fine Arts Partial (CFAP)</a></p>
-    <p><a href="CPGC" >Core Global Connections (CPGC)</a></p>
-    <p><a href="CPIC" >Core Intercultural (CPIC)</a></p>
-    <p><a href="CPLS" >Core Laboratory Science (CPLS)</a></p>
-    <p><a href="CPLA" >Core Latin America (CPLA)</a></p>
-    <p><a href="CMSP" >Core Math/Science Partial (CMSP)</a></p>
-    <p><a href="CPMS" >Core Mathematics/Science (CPMS)</a></p>
-    <p><a href="CPPE" >Core Pre-1800 (CPPE)</a></p>
-    <p><a href="CPRF" >Core Regional Focus (CPRF)</a></p>
-    <p><a href="CPUS" >Core United States (CPUS)</a></p>
-    <p><a href="CPUD" >Core United States Diversity (CPUD)</a></p>
+<button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
+<button class = "button-color"><a href="core/CPAS" >Core Central/South/East Asia</a></button>
+<button class = "button-color"><a href="core/CPEU" >Core Europe</a></button>
+<button class = "button-color"><a href="core/CPFA" >Core Fine Arts (CPFA)</a></button>
+<button class = "button-color"><a href="core/CFAP" >Core Fine Arts Partial (CFAP)</a></button>
+<button class = "button-color"><a href="core/CPGC" >Core Global Connections (CPGC)</a></button>
+<button class = "button-color"><a href="core/CPIC" >Core Intercultural (CPIC)</a></button>
+<button class = "button-color"><a href="core/CPLS" >Core Laboratory Science (CPLS)</a></button>
+<button class = "button-color"><a href="core/CPLA" >Core Latin America (CPLA)</a></button>
+<button class = "button-color"><a href="core/CMSP" >Core Math/Science Partial (CMSP)</a></button>
+<button class = "button-color"><a href="core/CPMS" >Core Mathematics/Science (CPMS)</a></button>
+<button class = "button-color"><a href="core/CPPE" >Core Pre-1800 (CPPE)</a></button>
+<button class = "button-color"><a href="core/CPRF" >Core Regional Focus (CPRF)</a></button>
+<button class = "button-color"><a href="core/CPUS" >Core United States (CPUS)</a></button>
+<button class = "button-color"><a href="core/CPUD" >Core United States Diversity (CPUD)</a></button>
+    </p>
 </div>
     </form>
 <style>
 
-table, th, td {border: 1px dotted black;
-    border-collapse: collapse;}
-    th, td {padding: 5px;}
+
 
 </style>
 <body>

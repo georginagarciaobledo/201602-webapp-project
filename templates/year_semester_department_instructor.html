@@ -2,22 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ years }}{{season}}{{department}}{{instructor}}</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>{{ year }}{{semester}}</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<div>
-    <form method = "get" action = {{/<year>/<semester>/<department>}}>
-</div>
+    <form method = "get" action = "/<year>/<semester>/<department>/<instructor>">
 
 <div>
-    <input class = "button" type = "submit" value="Search"/>
-</div>
-
-<div>
-    Filter by Department:
-    <select name="dept" id="dept_selection">
-    <option>Please Select a Department</option>
-    <option value="ABAR" >Occidental-in-Argentina</option>
+Going abroad?    
+    <select>
+    <option value="ABAR" >Occidental-in-Argentina</option>
     <option value="ABAS" >Occidental-in-Austria</option>
     <option value="ABAU" >Occidental-in-Australia</option>
     <option value="ABBO" >Occidental-in-Bolivia</option>
@@ -56,81 +49,78 @@
     <option value="ABTN" >Occidental-in-Taiwan</option>
     <option value="ABUA" >Occidental-in-the-United Arab Emirates</option>
     <option value="ABUK" >Occidental-in-the-United Kingdom</option>
-    <option value="AMST" >American Studies</option>
-    <option value="ARAB" >Arabic</option>
-    <option value="ARTH" >Art History and Visual Arts/Art History</option>
-    <option value="ARTM" >Art History and Visual Arts/Media Arts and Culture</option>
-    <option value="ARTS" >Art History and Visual Arts/Studio Art</option>
-    <option value="BICH" >Biochemistry</option>
-    <option value="BIO" >Biology</option>
-    <option value="CHEM" >Chemistry</option>
-    <option value="CHIN" >Chinese</option>
-    <option value="CLAS" >Classical Studies</option>
-    <option value="COGS" >Cognitive Science</option>
-    <option value="COMP" >Computer Science</option>
-    <option value="CSLC" >Comparative Studies in Literature and Culture</option>
-    <option value="CSP" >Cultural Studies Program</option>
-    <option value="CTSJ" >Critical Theory and Social Justice</option>
-    <option value="DWA" >Diplomacy and World Affairs</option>
-    <option value="ECLS" >English and Comparative Literary Studies</option>
-    <option value="ECON" >Economics</option>
-    <option value="EDUC" >Education</option>
-    <option value="ENGL" >English</option>
-    <option value="ENWR" >English Writing</option>
-    <option value="FREN" >French</option>
-    <option value="GEO" >Geology'</option>
-    <option value="GERM" >German</option>
-    <option value="GRK" >Greek</option>
-    <option value="HIST" >History</option>
-    <option value="ITAL" >Italian</option>
-    <option value="JAPN" >Japanese</option>
-    <option value="KINE" >Kinesiology</option>
-    <option value="LANG" >Language</option>
-    <option value="LATN" >Latin</option>
-    <option value="LING" >Linguistics</option>
-    <option value="LLAS" >Latino/a and Latin American Studies</option>
-    <option value="MATH" >Mathematics</option>
-    <option value="MUSA" >Music Applied Study</option>
-    <option value="MUSC" >Music</option>
-    <option value="PHAC" >Physical Activities</option>
-    <option value="PHIL" >Philosophy</option>
-    <option value="PHYS" >Physics</option>
-    <option value="POLS" >Politics</option>
-    <option value="PSYC" >Psychology</option>
-    <option value="RELS" >Religious Studies</option>
-    <option value="RUSN" >Russian</option>
-    <option value="SOC" >Sociology</option>
-    <option value="SPAN" >Spanish and French Studies</option>
-    <option value="THEA" >Theater</option>
-    <option value="UEP" >Urban and Environmental Policy</option>
-    <option value="WRD" >Writing and Retoric</option>
-</select>
+        </select>
+Filter by Department:
+    <p><a href="AMST" >American Studies</a></p>
+    <p><a href="ARAB" >Arabic</a></p>
+    <p><a href="ARTH" >Art History and Visual Arts/Art History</a></p>
+    <p><a href="ARTM" >Art History and Visual Arts/Media Arts and Culture</a></p>
+    <p><a href="ARTS" >Art History and Visual Arts/Studio Art</a></p>
+    <p><a href="BICH" >Biochemistry</a></p>
+    <p><a href="BIO" >Biology</a></p>
+    <p><a href="CHEM" >Chemistry</a></p>
+    <p><a href="CHIN" >Chinese</a></p>
+    <p><a href="CLAS" >Classical Studies</a></p>
+    <p><a href="COGS" >Cognitive Science</a></p>
+    <p><a href="COMP" >Computer Science</a></p>
+    <p><a href="CSLC" >Comparative Studies in Literature and Culture</a></p>
+    <p><a href="CSP" >Cultural Studies Program</a></p>
+    <p><a href="CTSJ" >Critical Theory and Social Justice</a></p>
+    <p><a href="DWA" >Diplomacy and World Affairs</a></p>
+    <p><a href="ECLS" >English and Comparative Literary Studies</a></p>
+    <p><a href="ECON" >Economics</a></p>
+    <p><a href="EDUC" >Education</a></p>
+    <p><a href="ENGL" >English</a></p>
+    <p><a href="ENWR" >English Writing</a></p>
+    <p><a href="FREN" >French</a></p>
+    <p><a href="GEO" >Geology'</a></p>
+    <p><a href="GERM" >German</a></p>
+    <p><a href="GRK" >Greek</a></p>
+    <p><a href="HIST" >History</a></p>
+    <p><a href="ITAL" >Italian</a></p>
+    <p><a href="JAPN" >Japanese</a></p>
+    <p><a href="KINE" >Kinesiology</a></p>
+    <p><a href="LANG" >Language</a></p>
+    <p><a href="LATN" >Latin</a></p>
+    <p><a href="LING" >Linguistics</a></p>
+    <p><a href="LLAS" >Latino/a and Latin American Studies</a></p>
+    <p><a href="MATH" >Mathematics</a></p>
+    <p><a href="MUSA" >Music Applied Study</a></p>
+    <p><a href="MUSC" >Music</a></p>
+    <p><a href="PHAC" >Physical Activities</a></p>
+    <p><a href="PHIL" >Philosophy</a></p>
+    <p><a href="PHYS" >Physics</a></p>
+    <p><a href="POLS" >Politics</a></p>
+    <p><a href="PSYC" >Psychology</a></p>
+    <p><a href="RELS" >Religious Studies</a></p>
+    <p><a href="RUSN" >Russian</a></p>
+    <p><a href="SOC" >Sociology</a></p>
+    <p><a href="SPAN" >Spanish and French Studies</a></p>
+    <p><a href="THEA" >Theater</a></p>
+    <p><a href="UEP" >Urban and Environmental Policy</a></p>
+    <p><a href="WRD" >Writing and Retoric</a></p>
 
     Filter by Core:
-    <select name="core_recs" id="core_recs_selection">
-    <option>Please Select Core</option>
-    <option value="CPAF" >Core Africa and the Middle East</option>
-    <option value="CPAS" >Core Central/South/East Asia</option>
-    <option value="CPEU" >Core Europe</option>
-    <option value="CPFA" >Core Fine Arts (CPFA)</option>
-    <option value="CFAP" >Core Fine Arts Partial (CFAP)</option>
-    <option value="CPGC" >Core Global Connections (CPGC)</option>
-    <option value="CPIC" >Core Intercultural (CPIC)</option>
-    <option value="CPLS" >Core Laboratory Science (CPLS)</option>
-    <option value="CPLA" >Core Latin America (CPLA)</option>
-    <option value="CMSP" >Core Math/Science Partial (CMSP)</option>
-    <option value="CPMS" >Core Mathematics/Science (CPMS)</option>
-    <option value="CPPE" >Core Pre-1800 (CPPE)</option>
-    <option value="CPRF" >Core Regional Focus (CPRF)</option>
-    <option value="CPUS" >Core United States (CPUS)</option>
-    <option value="CPUD" >Core United States Diversity (CPUD)</option>
-</select>
-    </form>
-
+    <p><a href="CPAF" >Core Africa and the Middle East</a></p>
+    <p><a href="CPAS" >Core Central/South/East Asia</a></p>
+    <p><a href="CPEU" >Core Europe</a></p>
+    <p><a href="CPFA" >Core Fine Arts (CPFA)</a></p>
+    <p><a href="CFAP" >Core Fine Arts Partial (CFAP)</a></p>
+    <p><a href="CPGC" >Core Global Connections (CPGC)</a></p>
+    <p><a href="CPIC" >Core Intercultural (CPIC)</a></p>
+    <p><a href="CPLS" >Core Laboratory Science (CPLS)</a></p>
+    <p><a href="CPLA" >Core Latin America (CPLA)</a></p>
+    <p><a href="CMSP" >Core Math/Science Partial (CMSP)</a></p>
+    <p><a href="CPMS" >Core Mathematics/Science (CPMS)</a></p>
+    <p><a href="CPPE" >Core Pre-1800 (CPPE)</a></p>
+    <p><a href="CPRF" >Core Regional Focus (CPRF)</a></p>
+    <p><a href="CPUS" >Core United States (CPUS)</a></p>
+    <p><a href="CPUD" >Core United States Diversity (CPUD)</a></p>
 </div>
+    </form>
 <style>
 
-table, th, td {border: 1px dotted black;
+table, th, td {border: 1px dotted grey;
     border-collapse: collapse;}
     th, td {padding: 5px;}
 
