@@ -5,123 +5,10 @@ from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
-
-DEPARTMENTMENTS = {
-    'AMST': 'American Studies',
-    'ARAB': 'Arabic',
-    'ARTH': 'Art/History',
-    'ARTM': 'Art/Media',
-    'ARTS': 'Art/Studio',
-    'BICH': 'Biochemistry',
-    'BIO': 'Biology',
-    'CHEM': 'Chemistry',
-    'CHIN': 'Chinese',
-    'COGS': 'Cognitive Science',
-    'CSLC': 'Comparative Studies/Lit &amp; Cult',
-    'COMP': 'Computer Science',
-    'CTSJ': 'Critical Theory/Social Justice',
-    'CSP': 'Cultural Studies Program',
-    'DWA': 'Diplomacy and World Affairs',
-    'ECON': 'Economics',
-    'EDUC': 'Education',
-    'ENGL': 'English',
-    'FREN': 'French',
-    'GEO': 'Geology',
-    'GERM': 'German',
-    'GRK': 'Greek',
-    'HIST': 'History',
-    'JAPN': 'Japanese',
-    'KINE': 'Kinesiology',
-    'LATN': 'Latin',
-    'LLAS': 'Latino/a and Latin Amer Stud',
-    'LING': 'Linguistics',
-    'MATH': 'Mathematics',
-    'MUSC': 'Music',
-    'MUSA': 'Music Applied Study',
-    'ABAR': 'Occidental-in-Argentina',
-    'ABAU': 'Occidental-in-Australia',
-    'ABAS': 'Occidental-in-Austria',
-    'ABBO': 'Occidental-in-Bolivia',
-    'ABBW': 'Occidental-in-Botswana',
-    'ABBR': 'Occidental-in-Brazil',
-    'ABCI': 'Occidental-in-Chile',
-    'ABCH': 'Occidental-in-China',
-    'ABCR': 'Occidental-in-Costa Rica',
-    'ABCZ': 'Occidental-in-Czech Republic',
-    'ABDE': 'Occidental-in-Denmark',
-    'ABDR': 'Occidental-in-Dominican Repub',
-    'ABFR': 'Occidental-in-France',
-    'ABGE': 'Occidental-in-Germany',
-    'ABHU': 'Occidental-in-Hungary',
-    'ABIC': 'Occidental-in-Iceland',
-    'ABIN': 'Occidental-in-India',
-    'ABID': 'Occidental-in-Indonesia',
-    'ABIR': 'Occidental-in-Ireland',
-    'ABIT': 'Occidental-in-Italy',
-    'ABJA': 'Occidental-in-Japan',
-    'ABJO': 'Occidental-in-Jordan',
-    'ABMO': 'Occidental-in-Morocco',
-    'ABNZ': 'Occidental-in-New Zealand',
-    'ABNI': 'Occidental-in-Nicaragua',
-    'ABPE': 'Occidental-in-Peru',
-    'ABRU': 'Occidental-in-Russia',
-    'ABSM': 'Occidental-in-Samoa',
-    'ABSE': 'Occidental-in-Senegal',
-    'ABSA': 'Occidental-in-South Africa',
-    'ABSP': 'Occidental-in-Spain',
-    'ABSN': 'Occidental-in-Sweden',
-    'ABSW': 'Occidental-in-Switzerland',
-    'ABTN': 'Occidental-in-Taiwan',
-    'ABNT': 'Occidental-in-the-Netherlands',
-    'ABNA': 'Oxy-in-Netherlands Antilles',
-    'ABUA': 'Oxy-in-United Arab Emirates',
-    'ABUK': 'Oxy-in-the-United Kingdom',
-    'PHIL': 'Philosophy',
-    'PHAC': 'Physical Activities',
-    'PHYS': 'Physics',
-    'POLS': 'Politics',
-    'PSYC': 'Psychology',
-    'RELS': 'Religious Studies',
-    'RUSN': 'Russian',
-    'SOC': 'Sociology',
-    'SPAN': 'Spanish',
-    'OXAB': 'Study Abroad',
-    'THEA': 'Theater',
-    'UEP': 'Urban and Environmental Policy',
-    'WRD': 'Writing and Rhetoric'}
-
-COURSES = {
-    'CPAF': 'Core Africa & The Middle East',
-    'CPAS': 'Core Central/South/East Asia',
-    'CPEU': 'Core Europe',
-    'CPFA': 'Core Fine Arts',
-    'CFAP': 'Core Fine Arts Partial',
-    'CPGC': 'Core Global Connections',
-    'CPIC': 'Core Intercultural',
-    'CPLS': 'Core Labratory Science',
-    'CPLA': 'Core Latin America',
-    'CMSP': 'Core Mathematics/Science Partial',
-    'CPMS': 'Core Mathematics/Science',
-    'CPPE': 'Core Pre-1800',
-    'CPRF': 'Core Regional Focus',
-    'CPUS': 'Core United States',
-    'CPUD': 'Core United States Partial'}
-
-YEAR_ABBREV = {
-    '2010': '2010',
-    '2011': '2011',
-    '2012': '2012',
-    '2013': '2013',
-    '2014': '2014',
-    '2015': '2015',
-    '2016': '2016',
-    '2017': '2017'}
-
-SEASONS = {
-    'spring': 'spring',
-    'fall': 'fall',
-    'summer': 'summer'
-}
+# helper function; returns True if needle (a string) is in haystack (a string)
+# from Library quiz
+def str_contains(haystack, needle):
+    return (needle.lower() in haystack.lower())
 
 class Course:
     def __init__(self, year, semester, department, course_number, section, class_title, unit, instructor, time, core,
@@ -183,7 +70,10 @@ def department_select(department):
 def core_select(core):
     results = []
     for course in get_data():
-        if course.core == core:
+        match = False
+        if str_contains(course.core, core):
+            match = True
+        if match:
             results.append(course)
     return render_template('core.html', results = results)
 
@@ -210,17 +100,37 @@ def year_semester_department_select(year, semester, department):
 def year_semester_core_select(year, semester, core):
     results = []
     for course in get_data():
-        if ((course.year == year and course.semester == semester) and course.core == core):
-            results.append(course)
+        if course.year == year and course.semester == semester:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
     return render_template('year_semester_core.html', results=results)
 
 @app.route('/<year>/<semester>/department/<department>/core/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
-        if ((course.year == year and course.semester == semester) and course.department == department) and course.core == core:
-            results.append(course)
+        if (course.year == year and course.semester == semester) and course.department == department:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
     return render_template('year_semester_department_core.html', results=results)
+
+@app.route('/<year>/<semester>/core/<core>/department/<department>/')
+def year_semester_core_department_select(year, semester, department, core):
+    results = []
+    for course in get_data():
+        if (course.year == year and course.semester == semester) and course.department == department:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
+    return render_template('year_semester_core_department.html', results=results)
 
 
 # The functions below lets you access files in the css, js, and images folders.
