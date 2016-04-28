@@ -6,8 +6,8 @@ from flask import Flask, render_template, send_from_directory
 app = Flask(__name__)
 
 # FIXME write your app below
-'''
-DEPARTMENT_ABBREV = {
+
+DEPARTMENTMENTS = {
     'AMST': 'American Studies',
     'ARAB': 'Arabic',
     'ARTH': 'Art/History',
@@ -91,7 +91,7 @@ DEPARTMENT_ABBREV = {
     'UEP': 'Urban and Environmental Policy',
     'WRD': 'Writing and Rhetoric'}
 
-CORE_ABBREV = {
+COURSES = {
     'CPAF': 'Core Africa & The Middle East',
     'CPAS': 'Core Central/South/East Asia',
     'CPEU': 'Core Europe',
@@ -123,7 +123,6 @@ SEASONS = {
     'fall': 'fall',
     'summer': 'summer'
 }
-'''
 
 class Course:
     def __init__(self, year, semester, department, course_number, section, class_title, unit, instructor, time, core,
@@ -152,6 +151,10 @@ def get_data():
             course_data.append(Course(year, semester, department, course_number, section, class_title, unit, instructor, time, core, seats, enrolled, reserved, reserved_open, waitlisted))
     return course_data
 
+@app.route('/')
+def view_homepage():
+    return render_template('base.html')
+
 @app.route('/<year>')
 def year_select(year):
     results = []
@@ -176,6 +179,14 @@ def department_select(department):
             results.append(course)
     return render_template('department.html', results = results)
 
+@app.route('/<core>')
+def core_select(core):
+    results = []
+    for course in get_data():
+        if course.core == core:
+            results.append(course)
+    return render_template('core.html', results = results)
+
 @app.route('/<year>/<semester>')
 def year_semester_select(year, semester):
     results = []
@@ -183,6 +194,7 @@ def year_semester_select(year, semester):
         if course.year == year and course.semester == semester:
             results.append(course)
     return render_template('year_semester.html', results=results)
+
 
 @app.route('/<year>/<semester>/<department>')
 def year_semester_department_select(year, semester, department):
@@ -193,48 +205,23 @@ def year_semester_department_select(year, semester, department):
     return render_template('year_semester_department.html', results=results)
 
 
-@app.route('/')
-def view_homepage():
-    return render_template('base.html')
+@app.route('/<year>/<semester>/<department>/<core>')
+def year_semester_department_core_select(year, semester, department, core):
+    results = []
+    for course in get_data():
+        if course.year == year and course.semester == semester and course.department == department and course.core == core:
+            results.append(course)
+    return render_template('year_semester_department_core.html', results=results)
 
-'''
-@app.route('/<semester>')
-def view_course_info(semester):
-    return render_template('semester.html')
-
-@app.route('/<year>')
-def view_course_info(year):
-    return render_template('year.html')
-'''
-
-
-
-'''
-@app.route('/fall2010')
-def get_fall2010():
-        fall2010options = []
-        for key, value in get_data(course_data):
-            fall2010options.append((key, value))
-        fall2010options.sort(key=lambda  f: x[1])
-        return render_template('fall2010.html', fall2010=fall2010options)
+@app.route('/<year>/<semester>/<department>/<instructor>')
+def year_semester_department_instructor_select(year, semester, department, instructor):
+    results = []
+    for course in get_data():
+        if course.year == year and course.semester == semester and course.department == department and course.instructor == instructor:
+            results.append(course)
+    return render_template('year_semester_department_instructor.html', results=results)
 
 
-
-
-
-
-@app.route('/fall2010')
-def view_course_info(year, semester, department, core):
-    return render_template('fall2010.html')
-
-@app.route('/department')
-def view_alldepartment():
-    listoptions = []
-    for key, value in DEPARTMENT_ABBREV.items():
-        listoptions.append((key, value))
-    listoptions.sort(key=lambda x: x[1])
-    return render_template('department2.html', department=listoptions)
-'''
 
 # The functions below lets you access files in the css, js, and images folders.
 # You should not change them unless you know what you are doing.
