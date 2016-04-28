@@ -2,58 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Course Counts</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>{{ year }}{{semester}}</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js"></script>
-    <img src="images/oxy.png" style="width:150px; height:150px;"/>
-
-<style>
-body {
-  background-color:black;
-    color: white;
-}
-button.button-color {
-  background-color: #f15b22;
-  border:none;
-  color: white;
-  font-size: 14px;
-  height: 50px;
-  width: 100px;
-    }
-    </style>
 
 </head>
-<body>
-Select by Year and Semester:
-<button class = "button-color"><a href="/2010/fall">Fall 2010</a></button>
-<button class = "button-color"><a href="/2010/spring">Spring 2010</a></button>
-<button class = "button-color"><a href="/2010/summer">Summer 2010</a></button>
-<button class = "button-color"><a href="/2011/fall">Fall 2011</a></button>
-<button class = "button-color"><a href="/2011/spring">Spring 2011</a></button>
-<button class = "button-color"><a href="/2011/summer">Summer 2011</a></button>
-<button class = "button-color"><a href="/2012/fall">Fall 2012</a></button>
-<button class = "button-color"><a href="/2012/spring">Spring 2012</a></button>
-<button class = "button-color"><a href="/2012/summer">Summer 2012</a></button>
-<button class = "button-color"><a href="/2013/fall">Fall 2013</a></button>
-<button class = "button-color"><a href="/2013/spring">Spring 2013</a></button>
-<button class = "button-color"><a href="/2013/summer">Summer 2013</a></button>
-<button class = "button-color"><a href="/2014/fall">Fall 2014</a></button>
-<button class = "button-color"><a href="/2014/spring">Spring 2014</a></button>
-<button class = "button-color"><a href="/2014/summer">Summer 2014</a></button>
-<button class = "button-color"><a href="/2015/fall">Fall 2015</a></button>
-<button class = "button-color"><a href="/2015/spring">Spring 2015</a></button>
-<button class = "button-color"><a href="/2015/summer">Summer 2015</a></button>
-<button class = "button-color"><a href="/2016/fall">Fall 2016</a></button>
-<button class = "button-color"><a href="/2016/spring">Spring 2016</a></button>
-<button class = "button-color"><a href="/2016/summer">Summer 2016</a></button>
-<button class = "button-color"><a href="/2017/fall">Fall 2017</a></button>
-<button class = "button-color"><a href="/2017/spring">Spring 2017</a></button>
-<button class = "button-color"><a href="/2017/summer">Summer 2017</a></button>
-<p>
+    <form method = "get" action = "/<year>/<semester>/core/<core>">
 
-</p>
-Select by Department:
+<div>
+Going abroad?    
+    <select>
+    <option value="ABAR" >Occidental-in-Argentina</option>
+    <option value="ABAS" >Occidental-in-Austria</option>
+    <option value="ABAU" >Occidental-in-Australia</option>
+    <option value="ABBO" >Occidental-in-Bolivia</option>
+    <option value="ABBR" >Occidental-in-Brazil</option>
+    <option value="ABBW" >Occidental-in-Botswana</option>
+    <option value="ABCH" >Occidental-in-China</option>
+    <option value="ABCI" >Occidental-in-Chile</option>
+    <option value="ABCR" >Occidental-in-Costa Rica</option>
+    <option value="ABCZ" >Occidental-in-the-Czech Republic</option>
+    <option value="ABDE" >Occidental-in-Denmark</option>
+    <option value="ABDR" >Occidental-in-the-Dominican Republic</option>
+    <option value="ABFR" >Occidental-in-France</option>
+    <option value="ABGE" >Occidental-in-Germany</option>
+    <option value="ABHU" >Occidental-in-Hungary</option>
+    <option value="ABIC" >Occidental-in-Iceland </option>
+    <option value="ABID" >Occidental-in-Indonesia (ABID)</option>
+    <option value="ABIN" >Occidental-in-India</option>
+    <option value="ABIR" >Occidental-in-Ireland (ABIR)</option>
+    <option value="ABIT" >Occidental-in-Italy (ABIT)</option>
+    <option value="ABJA" >Occidental-in-Japan (ABJA)</option>
+    <option value="ABJO" >Occidental-in-Jordan (ABJO)</option>
+    <option value="ABMO" >Occidental-in-Morocco (ABMO)</option>
+    <option value="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</option>
+    <option value="ABNI" >Occidental-in-Nicaragua (ABNI)</option>
+    <option value="ABNT" >Occidental-in-the-Netherlands (ABNT)</option>
+    <option value="ABNZ" >Occidental-in-New Zealand (ABNZ)</option>
+    <option value="ABPE" >Occidental-in-Peru (ABPE)</option>
+    <option value="ABRU" >Occidental-in-Russia (ABRU)</option>
+    <option value="ABSA" >Occidental-in-South Africa</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSM" >Occidental-in-Samoa</option>
+    <option value="ABSN" >Occidental-in-Sweden</option>
+    <option value="ABSP" >Occidental-in-Spain</option>
+    <option value="ABSW" >Occidental-in-Switzerland</option>
+    <option value="ABTN" >Occidental-in-Taiwan</option>
+    <option value="ABUA" >Occidental-in-the-United Arab Emirates</option>
+    <option value="ABUK" >Occidental-in-the-United Kingdom</option>
+        </select>
+
+    Filter by Department:
 <button class = "button-color"><a href="department/AMST" >American Studies</a></button>
 <button class = "button-color"><a href="department/ARAB" >Arabic</a></button>
 <button class = "button-color"><a href="department/ARTH" >Art History and Visual Arts/Art History</a></button>
@@ -102,25 +101,39 @@ Select by Department:
 <button class = "button-color"><a href="department/THEA" >Theater</a></button>
 <button class = "button-color"><a href="department/UEP" >Urban and Environmental Policy</a></button>
 <button class = "button-color"><a href="department/WRD" >Writing and Retoric</a></button>
+    </p>
+</div>
+    </form>
+<style>
 
-Select by Core:
-    <button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
-<button class = "button-color"><a href="core/CPAS" >Core Central/South/East Asia</a></button>
-<button class = "button-color"><a href="core/CPEU" >Core Europe</a></button>
-<button class = "button-color"><a href="core/CPFA" >Core Fine Arts (CPFA)</a></button>
-<button class = "button-color"><a href="core/CFAP" >Core Fine Arts Partial (CFAP)</a></button>
-<button class = "button-color"><a href="core/CPGC" >Core Global Connections (CPGC)</a></button>
-<button class = "button-color"><a href="core/CPIC" >Core Intercultural (CPIC)</a></button>
-<button class = "button-color"><a href="core/CPLS" >Core Laboratory Science (CPLS)</a></button>
-<button class = "button-color"><a href="core/CPLA" >Core Latin America (CPLA)</a></button>
-<button class = "button-color"><a href="core/CMSP" >Core Math/Science Partial (CMSP)</a></button>
-<button class = "button-color"><a href="core/CPMS" >Core Mathematics/Science (CPMS)</a></button>
-<button class = "button-color"><a href="core/CPPE" >Core Pre-1800 (CPPE)</a></button>
-<button class = "button-color"><a href="core/CPRF" >Core Regional Focus (CPRF)</a></button>
-<button class = "button-color"><a href="core/CPUS" >Core United States (CPUS)</a></button>
-<button class = "button-color"><a href="core/CPUD" >Core United States Diversity (CPUD)</a></button>
 
+</style>
+<body>
+<table style="width:100%">
+    <tr>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Department</th>
+        <th>Course Number</th>
+        <th>Title</th>
+        <th>Section</th>
+        <th>Units</th>
+        <th>Professor</th>
+        <th>Meeting Times</th>
+        <th>Cores Met</th>
+        </tr>
+    {%for class in results %}
+    <tr>
+        <td>{{class.year}}</td>
+        <td>{{class.semester}}</td>
+        <td>{{class.department}}</td>
+        <td>{{class.course_number}}</td>
+        <td>{{class.class_title}}</td>
+        <td>{{class.section}}</td>
+        <td>{{class.unit}}</td>
+        <td>{{class.instructor}}</td>
+        <td>{{class.time}}</td>
+        <td>{{class.core}}</td>
+        {% endfor %}</tr></table>
 </body>
-
-
-</body></html>
+</html>

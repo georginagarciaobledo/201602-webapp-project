@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ year }}{{semester}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <form method = "get" action = "/<year>/<semester>/<department>"
+
+<div>
+    Filter by Core:
+<button class = "button-color"><a href="core/CPAF" >Core Africa and the Middle East</a></button>
+<button class = "button-color"><a href="core/CPAS" >Core Central/South/East Asia</a></button>
+<button class = "button-color"><a href="core/CPEU" >Core Europe</a></button>
+<button class = "button-color"><a href="core/CPFA" >Core Fine Arts (CPFA)</a></button>
+<button class = "button-color"><a href="core/CFAP" >Core Fine Arts Partial (CFAP)</a></button>
+<button class = "button-color"><a href="core/CPGC" >Core Global Connections (CPGC)</a></button>
+<button class = "button-color"><a href="core/CPIC" >Core Intercultural (CPIC)</a></button>
+<button class = "button-color"><a href="core/CPLS" >Core Laboratory Science (CPLS)</a></button>
+<button class = "button-color"><a href="core/CPLA" >Core Latin America (CPLA)</a></button>
+<button class = "button-color"><a href="core/CMSP" >Core Math/Science Partial (CMSP)</a></button>
+<button class = "button-color"><a href="core/CPMS" >Core Mathematics/Science (CPMS)</a></button>
+<button class = "button-color"><a href="core/CPPE" >Core Pre-1800 (CPPE)</a></button>
+<button class = "button-color"><a href="core/CPRF" >Core Regional Focus (CPRF)</a></button>
+<button class = "button-color"><a href="core/CPUS" >Core United States (CPUS)</a></button>
+<button class = "button-color"><a href="core/CPUD" >Core United States Diversity (CPUD)</a></button>
+    </p>
+</div>
+    </form>
+<style>
+
+</style>
+<body>
+<table style="width:100%">
+    <tr>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Department</th>
+        <th>Course Number</th>
+        <th>Title</th>
+        <th>Section</th>
+        <th>Units</th>
+        <th>Professor</th>
+        <th>Meeting Times</th>
+        <th>Cores Met</th>
+        </tr>
+    {%for class in results %}
+    <tr>
+        <td>{{class.year}}</td>
+        <td>{{class.semester}}</td>
+        <td>{{class.department}}</td>
+        <td>{{class.course_number}}</td>
+        <td>{{class.class_title}}</td>
+        <td>{{class.section}}</td>
+        <td>{{class.unit}}</td>
+        <td>{{class.instructor}}</td>
+        <td>{{class.time}}</td>
+        <td>{{class.core}}</td>
+        {% endfor %}</tr></table>
+</body>
+</html>
