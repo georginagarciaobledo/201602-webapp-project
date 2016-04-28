@@ -5,7 +5,6 @@ from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
-# FIXME write your app below
 
 DEPARTMENTMENTS = {
     'AMST': 'American Studies',
@@ -155,7 +154,7 @@ def get_data():
 def view_homepage():
     return render_template('base.html')
 
-@app.route('/<year>')
+@app.route('/<year>/')
 def year_select(year):
     results = []
     for course in get_data():
@@ -163,7 +162,7 @@ def year_select(year):
             results.append(course)
     return render_template('year.html', results = results)
 
-@app.route('/<semester>')
+@app.route('/<semester>/')
 def semester_select(semester):
     results = []
     for course in get_data():
@@ -171,7 +170,7 @@ def semester_select(semester):
             results.append(course)
     return render_template('semester.html', results = results)
 
-@app.route('/<department>')
+@app.route('/<department>/')
 def department_select(department):
     results = []
     for course in get_data():
@@ -179,7 +178,7 @@ def department_select(department):
             results.append(course)
     return render_template('department.html', results = results)
 
-@app.route('/<core>')
+@app.route('/<core>/')
 def core_select(core):
     results = []
     for course in get_data():
@@ -187,7 +186,8 @@ def core_select(core):
             results.append(course)
     return render_template('core.html', results = results)
 
-@app.route('/<year>/<semester>')
+
+@app.route('/<year>/<semester>/')
 def year_semester_select(year, semester):
     results = []
     for course in get_data():
@@ -196,16 +196,16 @@ def year_semester_select(year, semester):
     return render_template('year_semester.html', results=results)
 
 
-@app.route('/<year>/<semester>/<department>')
+@app.route('/<year>/<semester>/<department>/')
 def year_semester_department_select(year, semester, department):
     results = []
     for course in get_data():
-        if (course.year == year and course.semester == semester) and course.department == department:
+        if ((course.year == year and course.semester == semester) and course.department == department):
             results.append(course)
     return render_template('year_semester_department.html', results=results)
 
 
-@app.route('/<year>/<semester>/<department>/<core>')
+@app.route('/<year>/<semester>/<department>/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
@@ -213,7 +213,7 @@ def year_semester_department_core_select(year, semester, department, core):
             results.append(course)
     return render_template('year_semester_department_core.html', results=results)
 
-@app.route('/<year>/<semester>/<department>/<instructor>')
+@app.route('/<year>/<semester>/<department>/<instructor>/')
 def year_semester_department_instructor_select(year, semester, department, instructor):
     results = []
     for course in get_data():
