@@ -3,58 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ year }}{{semester}}</title>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-    <form method = "get" action = "/<year>/<semester>/<department>">
+    <link rel="stylesheet" href="/css/style.css">
 
+</head>
+    <form method = "get" action = "/<year>/<semester>">
+        
 <div>
+Going abroad?    
+    <select>
+    <option value="ABAR" >Occidental-in-Argentina</option>
+    <option value="ABAS" >Occidental-in-Austria</option>
+    <option value="ABAU" >Occidental-in-Australia</option>
+    <option value="ABBO" >Occidental-in-Bolivia</option>
+    <option value="ABBR" >Occidental-in-Brazil</option>
+    <option value="ABBW" >Occidental-in-Botswana</option>
+    <option value="ABCH" >Occidental-in-China</option>
+    <option value="ABCI" >Occidental-in-Chile</option>
+    <option value="ABCR" >Occidental-in-Costa Rica</option>
+    <option value="ABCZ" >Occidental-in-the-Czech Republic</option>
+    <option value="ABDE" >Occidental-in-Denmark</option>
+    <option value="ABDR" >Occidental-in-the-Dominican Republic</option>
+    <option value="ABFR" >Occidental-in-France</option>
+    <option value="ABGE" >Occidental-in-Germany</option>
+    <option value="ABHU" >Occidental-in-Hungary</option>
+    <option value="ABIC" >Occidental-in-Iceland </option>
+    <option value="ABID" >Occidental-in-Indonesia (ABID)</option>
+    <option value="ABIN" >Occidental-in-India</option>
+    <option value="ABIR" >Occidental-in-Ireland (ABIR)</option>
+    <option value="ABIT" >Occidental-in-Italy (ABIT)</option>
+    <option value="ABJA" >Occidental-in-Japan (ABJA)</option>
+    <option value="ABJO" >Occidental-in-Jordan (ABJO)</option>
+    <option value="ABMO" >Occidental-in-Morocco (ABMO)</option>
+    <option value="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</option>
+    <option value="ABNI" >Occidental-in-Nicaragua (ABNI)</option>
+    <option value="ABNT" >Occidental-in-the-Netherlands (ABNT)</option>
+    <option value="ABNZ" >Occidental-in-New Zealand (ABNZ)</option>
+    <option value="ABPE" >Occidental-in-Peru (ABPE)</option>
+    <option value="ABRU" >Occidental-in-Russia (ABRU)</option>
+    <option value="ABSA" >Occidental-in-South Africa</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSM" >Occidental-in-Samoa</option>
+    <option value="ABSN" >Occidental-in-Sweden</option>
+    <option value="ABSP" >Occidental-in-Spain</option>
+    <option value="ABSW" >Occidental-in-Switzerland</option>
+    <option value="ABTN" >Occidental-in-Taiwan</option>
+    <option value="ABUA" >Occidental-in-the-United Arab Emirates</option>
+    <option value="ABUK" >Occidental-in-the-United Kingdom</option>
+        </select>
+
     Filter by Department:
-    <p><a href="ABAR" >Occidental-in-Argentina</a></p>
-    <p><a href="ABAS" >Occidental-in-Austria</a></p>
-    <p><a href="ABAU" >Occidental-in-Australia</a></p>
-    <p><a href="ABBO" >Occidental-in-Bolivia</a></p>
-    <p><a href="ABBR" >Occidental-in-Brazil</a></p>
-    <p><a href="ABBW" >Occidental-in-Botswana</a></p>
-    <p><a href="ABCH" >Occidental-in-China</a></p>
-    <p><a href="ABCI" >Occidental-in-Chile</a></p>
-    <p><a href="ABCR" >Occidental-in-Costa Rica</a></p>
-    <p><a href="ABCZ" >Occidental-in-the-Czech Republic</a></p>
-    <p><a href="ABDE" >Occidental-in-Denmark</a></p>
-    <p><a href="ABDR" >Occidental-in-the-Dominican Republic</a></p>
-    <p><a href="ABFR" >Occidental-in-France</a></p>
-    <p><a href="ABGE" >Occidental-in-Germany</a></p>
-    <p><a href="ABHU" >Occidental-in-Hungary</a></p>
-    <p><a href="ABIC" >Occidental-in-Iceland </a></p>
-    <p><a href="ABID" >Occidental-in-Indonesia (ABID)</a></p>
-    <p><a href="ABIN" >Occidental-in-India</a></p>
-    <p><a href="ABIR" >Occidental-in-Ireland (ABIR)</a></p>
-    <p><a href="ABIT" >Occidental-in-Italy (ABIT)</a></p>
-    <p><a href="ABJA" >Occidental-in-Japan (ABJA)</a></p>
-    <p><a href="ABJO" >Occidental-in-Jordan (ABJO)</a></p>
-    <p><a href="ABMO" >Occidental-in-Morocco (ABMO)</a></p>
-    <p><a href="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</a></p>
-    <p><a href="ABNI" >Occidental-in-Nicaragua (ABNI)</a></p>
-    <p><a href="ABNT" >Occidental-in-the-Netherlands (ABNT)</a></p>
-    <p><a href="ABNZ" >Occidental-in-New Zealand (ABNZ)</a></p>
-    <p><a href="ABPE" >Occidental-in-Peru (ABPE)</a></p>
-    <p><a href="ABRU" >Occidental-in-Russia (ABRU)</a></p>
-    <p><a href="ABSA" >Occidental-in-South Africa</a></p>
-    <p><a href="ABSE" >Occidental-in-Senegal</a></p>
-    <p><a href="ABSE" >Occidental-in-Senegal</a></p>
-    <p><a href="ABSM" >Occidental-in-Samoa</a></p>
-    <p><a href="ABSN" >Occidental-in-Sweden</a></p>
-    <p><a href="ABSP" >Occidental-in-Spain</a></p>
-    <p><a href="ABSW" >Occidental-in-Switzerland</a></p>
-    <p><a href="ABTN" >Occidental-in-Taiwan</a></p>
-    <p><a href="ABUA" >Occidental-in-the-United Arab Emirates</a></p>
-    <p><a href="ABUK" >Occidental-in-the-United Kingdom</a></p>
     <p><a href="AMST" >American Studies</a></p>
     <p><a href="ARAB" >Arabic</a></p>
     <p><a href="ARTH" >Art History and Visual Arts/Art History</a></p>
     <p><a href="ARTM" >Art History and Visual Arts/Media Arts and Culture</a></p>
     <p><a href="ARTS" >Art History and Visual Arts/Studio Art</a></p>
     <p><a href="BICH" >Biochemistry</a></p>
-    <p><a href="/2010/fall/BIO" >Biology</a></p>
+    <p><a href="BIO" >Biology</a></p>
     <p><a href="CHEM" >Chemistry</a></p>
     <p><a href="CHIN" >Chinese</a></p>
     <p><a href="CLAS" >Classical Studies</a></p>
@@ -113,11 +118,12 @@
     <p><a href="CPRF" >Core Regional Focus (CPRF)</a></p>
     <p><a href="CPUS" >Core United States (CPUS)</a></p>
     <p><a href="CPUD" >Core United States Diversity (CPUD)</a></p>
+    </p>
 </div>
     </form>
 <style>
 
-table, th, td {border: 1px dotted black;
+table, th, td {border: 1px dotted grey;
     border-collapse: collapse;}
     th, td {padding: 5px;}
 

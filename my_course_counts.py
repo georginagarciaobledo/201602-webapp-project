@@ -205,6 +205,14 @@ def year_semester_department_select(year, semester, department):
     return render_template('year_semester_department.html', results=results)
 
 
+@app.route('/<year>/<semester>/<core>/')
+def year_semester_core_select(year, semester, core):
+    results = []
+    for course in get_data():
+        if ((course.year == year and course.semester == semester) and course.core == core):
+            results.append(course)
+    return render_template('year_semester_core.html', results=results)
+
 @app.route('/<year>/<semester>/<department>/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
@@ -220,7 +228,6 @@ def year_semester_department_instructor_select(year, semester, department, instr
         if course.year == year and course.semester == semester and course.department == department and course.instructor == instructor:
             results.append(course)
     return render_template('year_semester_department_instructor.html', results=results)
-
 
 
 # The functions below lets you access files in the css, js, and images folders.
