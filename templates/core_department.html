@@ -2,10 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{semester}}</title>
+    <title>{{ year }}{{semester}}</title>
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 <body>
+    <form method = "get" action = "/<year>/<semester>">
+
+<div>
+Going abroad?    
+    <select>
+    <option value="ABAR" >Occidental-in-Argentina</option>
+    <option value="ABAS" >Occidental-in-Austria</option>
+    <option value="ABAU" >Occidental-in-Australia</option>
+    <option value="ABBO" >Occidental-in-Bolivia</option>
+    <option value="ABBR" >Occidental-in-Brazil</option>
+    <option value="ABBW" >Occidental-in-Botswana</option>
+    <option value="ABCH" >Occidental-in-China</option>
+    <option value="ABCI" >Occidental-in-Chile</option>
+    <option value="ABCR" >Occidental-in-Costa Rica</option>
+    <option value="ABCZ" >Occidental-in-the-Czech Republic</option>
+    <option value="ABDE" >Occidental-in-Denmark</option>
+    <option value="ABDR" >Occidental-in-the-Dominican Republic</option>
+    <option value="ABFR" >Occidental-in-France</option>
+    <option value="ABGE" >Occidental-in-Germany</option>
+    <option value="ABHU" >Occidental-in-Hungary</option>
+    <option value="ABIC" >Occidental-in-Iceland </option>
+    <option value="ABID" >Occidental-in-Indonesia (ABID)</option>
+    <option value="ABIN" >Occidental-in-India</option>
+    <option value="ABIR" >Occidental-in-Ireland (ABIR)</option>
+    <option value="ABIT" >Occidental-in-Italy (ABIT)</option>
+    <option value="ABJA" >Occidental-in-Japan (ABJA)</option>
+    <option value="ABJO" >Occidental-in-Jordan (ABJO)</option>
+    <option value="ABMO" >Occidental-in-Morocco (ABMO)</option>
+    <option value="ABNA" >Occidental-in-the-Netherlands Antilles (ABNA)</option>
+    <option value="ABNI" >Occidental-in-Nicaragua (ABNI)</option>
+    <option value="ABNT" >Occidental-in-the-Netherlands (ABNT)</option>
+    <option value="ABNZ" >Occidental-in-New Zealand (ABNZ)</option>
+    <option value="ABPE" >Occidental-in-Peru (ABPE)</option>
+    <option value="ABRU" >Occidental-in-Russia (ABRU)</option>
+    <option value="ABSA" >Occidental-in-South Africa</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSE" >Occidental-in-Senegal</option>
+    <option value="ABSM" >Occidental-in-Samoa</option>
+    <option value="ABSN" >Occidental-in-Sweden</option>
+    <option value="ABSP" >Occidental-in-Spain</option>
+    <option value="ABSW" >Occidental-in-Switzerland</option>
+    <option value="ABTN" >Occidental-in-Taiwan</option>
+    <option value="ABUA" >Occidental-in-the-United Arab Emirates</option>
+    <option value="ABUK" >Occidental-in-the-United Kingdom</option>
+        </select>
+ </div>
+
 <section id="department">
 <h1>Select by Department:</h1>
 <nav>
@@ -82,7 +130,6 @@
     <div><a href="core/CPUD" class="button-color">Core United States Diversity (CPUD)</a></div>
 </nav>
 </section>
-
 <table style="width:100%">
     <tr>
         <th>Year</th>
@@ -109,13 +156,14 @@
         <td>{{class.time}}</td>
         <td>{{class.core}}</td>
         {% endfor %}</tr></table>
-<script>
-    var buttons = document.getElementsByClassName("button-color");
-for(var i=0;i<buttons.length;i++) {
-  buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
-  //or
-  buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
-}
-</script>
+
+    <script>
+        var buttons = document.getElementsByClassName("button-color");
+            for(var i=0;i<buttons.length;i++) {
+                buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
+                //or
+                buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
+                }
+    </script>
 </body>
 </html>

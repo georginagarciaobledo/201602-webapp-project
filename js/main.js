@@ -4,4 +4,3 @@ for(var i=0;i<buttons.length;i++) {
   //or
   buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
 }
-
