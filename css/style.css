@@ -1,6 +1,6 @@
 body {
   background-color:#fff;
-   color: #fff;
+   color: #000;
    text-align:center;
 
 }
@@ -9,7 +9,6 @@ h1 {
 }
 nav li {
     display:inline-block;
-    text-decoration:none;
 }
 nav div {
     display:inline-block;
