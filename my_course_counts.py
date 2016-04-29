@@ -74,6 +74,18 @@ def core_select(core):
             results.append(course)
     return render_template('core.html', results = results)
 
+@app.route('/core/<core>/department/<department>/')
+def core_dept_select(core, department):
+    results = []
+    for course in get_data():
+        if course.department == department:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
+    return render_template('core_department.html', results = results)
+
 
 @app.route('/<year>/<semester>/')
 def year_semester_select(year, semester):
