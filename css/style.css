@@ -1,6 +1,6 @@
 body {
   background-color:#fff;
-   color: #000;
+   color: #fff;
    text-align:center;
 
 }
@@ -9,6 +9,7 @@ h1 {
 }
 nav li {
     display:inline-block;
+    text-decoration:none;
 }
 nav div {
     display:inline-block;
@@ -26,12 +27,8 @@ nav div a, nav li a  {
     font-size: 20px;
     margin:10px;
 }
-#main {
-    display:flex;
-    align-content:center;
-    flex-wrap:wrap;
-}
-button.button-color {
+
+.button-color {
   background-color: #FF8C00;
   border:none;
   color: #fff;
