@@ -121,7 +121,12 @@
     <div><a href="core/CPUD" class="button-color">Core United States Diversity (CPUD)</a></div>
 </nav>
 </section>
-
-    <script src="/js/main.js"></script>
+    <script>
+    var buttons = document.getElementsByClassName("button-color");
+for(var i=0;i<buttons.length;i++) {
+  buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
+  //or
+  buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
+}</script>
 </body>
 </html>

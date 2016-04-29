@@ -7,10 +7,7 @@
 
     <form method = "get" action = "/<year>/<semester>/core/<core>/department/<department>">
         </form>
-<style>
 
-
-</style>
 <body>
 <table style="width:100%">
     <tr>
@@ -38,5 +35,14 @@
         <td>{{class.time}}</td>
         <td>{{class.core}}</td>
         {% endfor %}</tr></table>
+
+    <script>
+        var buttons = document.getElementsByClassName("button-color");
+for(var i=0;i<buttons.length;i++) {
+  buttons[i].classList.add(i % 2 === 0 ? "even" : "odd");
+  //or
+  buttons[i].style["background-color"] = i % 2 === 0 ? "#FF6600" : "#696666";
+}
+    </script>
 </body>
 </html>
