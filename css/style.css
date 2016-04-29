@@ -1,12 +1,10 @@
 body {
-  background-color:#fff;
-   color: #000;
+  background-color:#000;
+   color: #fff;
    text-align:center;
 
 }
-h1 {
-    color:#000;
-}
+
 nav li {
     display:inline-block;
 }
@@ -16,25 +14,27 @@ nav div {
 nav div a, nav li a  {
     display:flex;
     float:left;
-    width:180px;
-    height:150px;
+    width:110px;
+    height:110px;
     text-align:center;
     justify-content:center;
     align-items:center;
     text-decoration:none;
     color:#fff;
-    font-size: 20px;
+    font-size: 18px;
     margin:10px;
+    word-wrap:break-word;
 }
 
 .button-color {
   background-color: #FF8C00;
   border:none;
   color: #fff;
-  font-size: 20px;
-  height: 150px;
-  width: 180px;
+  font-size: 18px;
+  height: 110px;
+  width: 110px;
   margin:10px;
+  word-wrap:break-word;
 }
 
 table, th, td {
@@ -44,3 +44,6 @@ table, th, td {
  th, td {
     padding: 5px;
     }
+ tr:nth-child(even) {
+    background-color:#FAB273;
+}
