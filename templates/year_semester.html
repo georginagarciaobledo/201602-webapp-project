@@ -92,6 +92,8 @@
         <th>Units</th>
         <th>Professor</th>
         <th>Meeting Times</th>
+        <th>Seats</th>
+        <th>Enrolled</th>
         <th>Cores Met</th>
         </tr>
     {%for class in results %}
@@ -105,6 +107,8 @@
         <td>{{class.unit}}</td>
         <td>{{class.instructor}}</td>
         <td>{{class.time}}</td>
+        <td>{{class.seats}}</td>
+        <td>{{class.enrolled}}</td>
         <td>{{class.core}}</td>
         {% endfor %}</tr></table>
 
