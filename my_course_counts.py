@@ -41,22 +41,6 @@ def get_data():
 def view_homepage():
     return render_template('base.html')
 
-@app.route('/<year>/')
-def year_select(year):
-    results = []
-    for course in get_data():
-        if course.year == year:
-            results.append(course)
-    return render_template('year.html', results = results)
-
-@app.route('/<semester>/')
-def semester_select(semester):
-    results = []
-    for course in get_data():
-        if course.semester == semester:
-            results.append(course)
-    return render_template('semester.html', results = results)
-
 
 @app.route('/department/<department>/')
 def department_select(department):
@@ -65,6 +49,19 @@ def department_select(department):
         if course.department == department:
             results.append(course)
     return render_template('departments.html', results = results)
+
+
+@app.route('/department/<department>/core/<core>/')
+def department_core_select(department, core):
+    results = []
+    for course in get_data():
+        if course.department == department:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
+    return render_template('department_core.html', results = results)
 
 @app.route('/core/<core>/')
 def core_select(core):
@@ -76,6 +73,18 @@ def core_select(core):
         if match:
             results.append(course)
     return render_template('core.html', results = results)
+
+@app.route('/core/<core>/department/<department>/')
+def core_dept_select(core, department):
+    results = []
+    for course in get_data():
+        if course.department == department:
+            match = False
+            if str_contains(course.core, core):
+                match = True
+            if match:
+                results.append(course)
+    return render_template('core_department.html', results = results)
 
 
 @app.route('/<year>/<semester>/')
