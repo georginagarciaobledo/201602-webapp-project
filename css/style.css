@@ -12,27 +12,27 @@ nav li {
 nav div {
     display:inline-block;
 }
-nav div a, nav li a  {
+nav div a  {
     display:flex;
     float:left;
     width:110px;
-    height:110px;
+    height:50px;
     text-align:center;
     justify-content:center;
     align-items:center;
     text-decoration:none;
     color:#fff;
-    font-size: 17px;
+    font-size: 15px;
     margin:10px;
     word-wrap:break-word;
 }
 
 .button-color {
-  background-color: #FF8C00;
+
   border:none;
   color: #fff;
-  font-size: 17px;
-  height: 110px;
+  font-size: 15px;
+  height: 50px;
   width: 110px;
   margin:10px;
   word-wrap:break-word;
