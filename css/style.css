@@ -38,12 +38,21 @@ nav div a, nav li a  {
 }
 
 table, th, td {
-    border: 1px dotted grey;
+    border: 1px solid grey;
     border-collapse: collapse;
     }
  th, td {
     padding: 5px;
     }
+ tr {
+    background-color:#000;
+    color:#fff;
+ }
+ .table-titles {
+    background-color:#696666;
+    color:#fff;
+ }
  tr:nth-child(even) {
-    background-color:#FAB273;
+    background-color:#FF6600;
+    color:#fff;
 }
