@@ -72,7 +72,7 @@ def core_dept_select(core, department):
     return render_template('core_department.html', results = results)
 
 # determines which courses should appear if core then department then year & term filters are selected
-@app.route('/core/<core>/department/<department>/year/<year>/term/<semester>')
+@app.route('/core/<core>/department/<department>/<year>/<semester>')
 def core_dept_year_term_select(core, department, year, semester):
     results = []
     for course in get_data():
@@ -85,7 +85,7 @@ def core_dept_year_term_select(core, department, year, semester):
     return render_template('core_dept_year_term.html')
 
 # determines which courses should appear if core then year & term filters are selected
-@app.route('/core/<core>/year/<year>/term/<semester>')
+@app.route('/core/<core>/<year>/<semester>')
 def core_year_term_select(core, year, semester):
     results = []
     for course in get_data():
@@ -98,7 +98,7 @@ def core_year_term_select(core, year, semester):
     return render_template('core_year_term.html', results=results)
 
 # determines which courses should appear if core then year & term then department filters are selected
-@app.route('/core/<core>/year/<year>/term/<semester>/department/<department>')
+@app.route('/core/<core>/<year>/<semester>/department/<department>')
 def core_year_term_dept_select(core, year, semester, department):
     results = []
     for course in get_data():
@@ -133,7 +133,7 @@ def department_core_select(department, core):
     return render_template('dept_core.html', results = results)
 
 # determines which courses should appear if dept then core then year & term filters are selected
-@app.route('/department/<department>/core/<core>/year/<year>/term/<semester>')
+@app.route('/department/<department>/core/<core>/<year>/<semester>')
 def department_core_year_term_select(department, core, year, semester):
     results = []
     for course in get_data():
@@ -146,7 +146,7 @@ def department_core_year_term_select(department, core, year, semester):
     return render_template('dept_core_year_term.html', results=results)
 
 # determines which courses should appear if dept then year & term filters are selected
-@app.route('/department/<department>/year/<year>/term/<semester>')
+@app.route('/department/<department>/<year>/<semester>')
 def dept_year_term_select(department, year, semester):
     results = []
     for course in get_data():
@@ -155,7 +155,7 @@ def dept_year_term_select(department, year, semester):
     return render_template('dept_year_term.html', results=results)
 
 # determines which courses should appear if dept then year & term then core filters are selected
-@app.route('/department/<department>/year/<year>/term/<semester>/core/<core>')
+@app.route('/department/<department>/<year>/<semester>/core/<core>')
 def dept_year_term_core_select(department, year, semester, core):
     results = []
     for course in get_data():
@@ -168,7 +168,7 @@ def dept_year_term_core_select(department, year, semester, core):
     return render_template('dept_year_term_core', results=results)
 
 # determines which courses should appear if year & term filter is selected
-@app.route('/year/<year>/term/<semester>/')
+@app.route('/<year>/<semester>/')
 def year_semester_select(year, semester):
     results = []
     for course in get_data():
@@ -177,7 +177,7 @@ def year_semester_select(year, semester):
     return render_template('year_semester.html', results=results)
 
 # determines which courses should appear if year & term then core filters are selected
-@app.route('/year/<year>/term/<semester>/core/<core>/')
+@app.route('/<year>/<semester>/core/<core>/')
 def year_semester_core_select(year, semester, core):
     results = []
     for course in get_data():
@@ -190,7 +190,7 @@ def year_semester_core_select(year, semester, core):
     return render_template('year_semester_core.html', results=results)
 
 # determines which courses should appear if year & term then core then dept filters are selected
-@app.route('/year/<year>/term/<semester>/core/<core>/department/<department>/')
+@app.route('/<year>/<semester>/core/<core>/department/<department>/')
 def year_semester_core_department_select(year, semester, department, core):
     results = []
     for course in get_data():
@@ -203,7 +203,7 @@ def year_semester_core_department_select(year, semester, department, core):
     return render_template('year_semester_core_department.html', results=results)
 
 # determines which courses should appear if year & term filter then dept filters are selected
-@app.route('/year/<year>/term/<semester>/department/<department>/')
+@app.route('/<year>/<semester>/department/<department>/')
 def year_semester_department_select(year, semester, department):
     results = []
     for course in get_data():
@@ -212,7 +212,7 @@ def year_semester_department_select(year, semester, department):
     return render_template('year_semester_department.html', results=results)
 
 # determines which courses should appear if year & term filter then dept then core filters are selected
-@app.route('/year/<year>/term/<semester>/department/<department>/core/<core>/')
+@app.route('/<year>/<semester>/department/<department>/core/<core>/')
 def year_semester_department_core_select(year, semester, department, core):
     results = []
     for course in get_data():
