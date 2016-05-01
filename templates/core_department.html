@@ -1,3 +1,4 @@
+<!-- sets up file; create top of page (header); inserts logo -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,14 @@
 
 </head>
 
+<!-- establishes which url this should appear on -->
 <form method = "get" action = "/core/<core>/department/<department>"></form>
 
 <body>
+<!-- Info about what's on page and what can do next. -->
 <h3>Scroll down to see all the courses that meet the selected core requirement in the selected department. Narrow your search by clicking on a filter below.</h3>
 
+<!-- Creates buttons for year/semester filtering -->
 <section id="year-semester">
 <h1>Select by Year and Semester:</h1>
 <nav>
@@ -39,8 +43,6 @@
 <div><a href="/2016/summer" class="button-color">Summer 2016</a></div>
 <div><a href="/2016/fall" class="button-color">Fall 2016</a></div>
 <div><a href="/2017/spring" class="button-color">Spring 2017</a></div>
-
-
 </nav>
 </section>
 
@@ -48,6 +50,7 @@
 
 <nav>
 
+<!-- Creates table with courses that pass core and dept filters -->
 <table style="width:100%">
     <tr class="table-titles">
         <th>Year</th>

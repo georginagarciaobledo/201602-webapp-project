@@ -1,3 +1,4 @@
+<!-- sets up file; create top of page (header); inserts logo -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,14 @@
 
 </head>
 
+<!-- establishes which url this should appear on -->
 <form method = "get" action = "/core/<core>"></form>
 
 <body>
-
+<!-- Information about what is on page, what can do next. -->
 <h3>Scroll down to see all the courses that meet the selected core requirement. Narrow your search by clicking on a filter below.</h3>
 
+<!-- Creates year/semester buttons -->
 <section id="year-semester">
 <h1>Select by Year and Term:</h1>
 <nav>
@@ -44,6 +47,7 @@
 </nav>
 </section>
 
+<!-- Creates department buttons -->
 <section id="department">
 <h1>Select by Department:</h1>
 <nav>
@@ -99,6 +103,8 @@
 
 </nav>
 </section>
+
+<!-- Produces table with courses that meet selected core. -->
 <table style="width:100%">
     <tr class="table-titles">
         <th>Year</th>
