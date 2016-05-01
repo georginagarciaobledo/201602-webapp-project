@@ -48,7 +48,7 @@ def department_select(department):
     for course in get_data():
         if course.department == department:
             results.append(course)
-    return render_template('departments.html', results = results)
+    return render_template('department.html', results = results)
 
 
 @app.route('/department/<department>/core/<core>/')
