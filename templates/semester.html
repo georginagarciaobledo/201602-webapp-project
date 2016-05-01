@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ year }}{{semester}}</title>
+    <title>{{semester}}</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-<a3>Scroll down to see all the courses offered in the selected term. Narrow your search by clicking on a filter below.</a3>
-
 <section id="department">
 <h1>Select by Department:</h1>
 <nav>
+
 <div><a href="department/AMST" class="button-color">American Studies</a></div>
 <div><a href="department/ARAB" class="button-color">Arabic</a></div>
-<div><a href="department/ARTH" class="button-color">AHVA/Art History</a></div>
-<div><a href="department/ARTM" class="button-color">AHVA/Media Arts and Culture</a></div>
+<div><a href="department/ARTH" class="button-color">AHVA / Art History</a></div>
+<div><a href="department/ARTM" class="button-color">AHVA / Media Arts & Culture</a></div>
 <div><a href="department/ARTS" class="button-color">AHVA/Studio Art</a></div>
 <div><a href="department/BICH" class="button-color">Biochemistry</a></div>
 <div><a href="department/BIO" class="button-color">Biology</a></div>
@@ -28,7 +26,7 @@
 <div><a href="department/CSP" class="button-color">Cultural Studies Program</a></div>
 <div><a href="department/CTSJ" class="button-color">Critical Theory and Social Justice</a></div>
 <div><a href="department/DWA" class="button-color">Diplomacy and World Affairs</a></div>
-<div><a href="department/ECLS" class="button-color">English and Comparative Literary Studies</a></div>
+<div><a href="department/ECLS" class="button-color">ECLS</a></div>
 <div><a href="department/ECON" class="button-color">Economics</a></div>
 <div><a href="department/EDUC" class="button-color">Education</a></div>
 <div><a href="department/ENGL" class="button-color">English</a></div>
@@ -60,6 +58,7 @@
 <div><a href="department/THEA" class="button-color">Theater</a></div>
 <div><a href="department/UEP" class="button-color">Urban and Environmental Policy</a></div>
 <div><a href="department/WRD" class="button-color">Writing and Rhetoric</a></div>
+
 </nav>
 </section>
 <section id="core">
@@ -83,6 +82,7 @@
     <div><a href="core/CPUD" class="button-color">Core United States Diversity (CPUD)</a></div>
 </nav>
 </section>
+
 <table style="width:100%">
     <tr class="table-titles">
         <th>Year</th>
@@ -113,7 +113,7 @@
         <td>{{class.enrolled}}</td>
         <td>{{class.core}}</td>
         {% endfor %}</tr></table>
-
+        {% endfor %}</tr></table>
 <script src="/js/main.js"></script>
 </body>
 </html>
