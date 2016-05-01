@@ -5,13 +5,11 @@ body {
    font-family: "Helvetica Neue", sans-serif;
 
 }
-
-nav li {
-    display:inline-block;
-}
+/* to display button in rows */
 nav div {
     display:inline-block;
 }
+/* style for each button*/
 nav div a  {
     display:flex;
     float:left;
@@ -38,10 +36,7 @@ nav div a  {
   word-wrap:break-word;
 }
 
-a:hover {
-    background-color:rgba(255,255,255,0.5);
-}
-
+/*style for the table rows*/
 table, th, td {
     border: 1px solid grey;
     border-collapse: collapse;
@@ -53,10 +48,12 @@ table, th, td {
     background-color:#FBA16C;
     color:#000;
  }
+ /*make table title own color*/
  .table-titles {
     background-color:#FF6600;
     color:#fff;
  }
+ /*make the even rows a different color*/
  tr:nth-child(even) {
     background-color:#DCDCDC;
 
